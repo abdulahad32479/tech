@@ -73,7 +73,7 @@ const Navbar = () => {
           {/* Theme Toggle - Visible on all screens */}
           <button
             onClick={toggleTheme}
-            className="p-2.5 rounded-xl hover:bg-foreground/10 transition-all active:scale-95 shadow-sm border border-foreground/5 bg-foreground/5"
+            className="p-2.5 rounded-xl hover:bg-foreground/10 transition-all active:scale-95 shadow-sm  bg-white/30"
             aria-label="Toggle theme"
           >
             {isLightMode ? <Moon size={18} className="text-foreground" /> : <Sun size={18} className="text-foreground" />}
@@ -81,10 +81,10 @@ const Navbar = () => {
 
           {/* Desktop Buttons (for >= lg) */}
           <div className="hidden lg:flex items-center gap-3">
-            <button className="px-5 py-2.5 rounded-[5px] border border-white/20 font-bold text-[13px] hover:bg-foreground hover:text-background transition-all">
+            <button className="px-5 py-2.5 rounded-[5px] border border-border font-bold text-[13px] hover:bg-foreground hover:text-background transition-all">
               Book Consultation
             </button>
-            <button className="px-5 py-2.5 border border-white rounded-[5px] bg-blue-600 font-bold text-[13px] text-white hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/40">
+            <button className="px-5 py-2.5 border border-blue-500 rounded-[5px] bg-blue-600 font-bold text-[13px] text-white hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/40">
               Get Started
             </button>
           </div>

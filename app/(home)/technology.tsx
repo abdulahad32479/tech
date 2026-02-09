@@ -60,7 +60,7 @@ const Technology = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-black text-foreground"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground leading-tight"
           >
             Our Technology <span className="text-blue-500">Stack</span>
           </motion.h2>
@@ -77,7 +77,7 @@ const Technology = () => {
 
         {/* Custom Tabs */}
         <div className="flex justify-center mb-16 px-4">
-          <div className="flex bg-[#0d0e12] p-2 rounded-[20px] border border-white/20 backdrop-blur-sm w-full max-w-2xl justify-between">
+          <div className="flex bg-card p-2 rounded-[20px] border border-border backdrop-blur-sm w-full max-w-2xl justify-between">
             {tabs.map((tab) => (
               <button
                 key={tab}
@@ -115,7 +115,7 @@ const Technology = () => {
                   delay: idx * 0.08, 
                   ease: [0.23, 1, 0.32, 1] 
                 }}
-                className="group p-8 rounded-[24px] bg-[#0d0e12] border border-white/20 hover:border-blue-500/30 transition-all duration-500 flex flex-col items-center justify-center gap-4 text-center hover:shadow-2xl hover:shadow-blue-600/5"
+                className="group p-8 rounded-[24px] bg-card border border-border hover:border-blue-500/30 transition-all duration-500 flex flex-col items-center justify-center gap-4 text-center hover:shadow-2xl hover:shadow-blue-600/5"
               >
                 <div className="w-16 h-16 rounded-2xl bg-foreground/5 flex items-center justify-center mb-2 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-inner">
                   {React.cloneElement(tech.icon as React.ReactElement, { size: 32 })}

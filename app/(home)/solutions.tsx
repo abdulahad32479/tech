@@ -79,7 +79,7 @@ const Solutions = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-black text-foreground mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight"
           >
             Solutions That Drive <span className="text-blue-500">Real Results</span>
           </motion.h2>
@@ -106,7 +106,7 @@ const Solutions = () => {
                 delay: idx * 0.1, 
                 ease: [0.23, 1, 0.32, 1] 
               }}
-              className={`group rounded-[10px] bg-[#0d0e12] border ${item.color} relative overflow-hidden transition-all duration-500 ${item.hoverBg} hover:shadow-2xl hover:shadow-blue-500/5 flex flex-col`}
+              className={`group rounded-[10px] bg-card border ${item.color} relative overflow-hidden transition-all duration-500 ${item.hoverBg} hover:shadow-2xl hover:shadow-blue-500/5 flex flex-col`}
             >
               {/* 5px Colored Top Padding Area */}
               <div className={`h-[5px] w-full ${item.bgColor} opacity-80`} />
@@ -127,7 +127,7 @@ const Solutions = () => {
 
               <div className="space-y-3 mb-10">
                 {item.features.map((feature, fIdx) => (
-                  <div key={fIdx} className="flex items-center gap-3 text-sm font-bold text-foreground/40 group-hover:text-foreground/60 transition-colors">
+                  <div key={fIdx} className="flex items-center gap-3 text-sm font-bold text-muted group-hover:text-foreground/60 transition-colors">
                     <div className={`w-1.5 h-1.5 rounded-full bg-current ${item.textColor}`} />
                     {feature}
                   </div>

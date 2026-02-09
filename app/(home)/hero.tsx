@@ -43,7 +43,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-1xl sm:text-2xl md:text-3xl lg:text-5xl font-black mb-8 flex flex-col items-center gap-4"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight flex flex-col items-center gap-4 text-foreground"
         >
           <span>Transform Your Business with</span>
           <div className="h-[1.2em] relative inline-block  w-full text-center">

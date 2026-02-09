@@ -4,7 +4,10 @@ import Solutions from "./(home)/solutions";
 import Technology from "./(home)/technology";
 import Strategy from "./(home)/strategy";
 import Chat from "./(home)/chat";
-
+import Projects from "./(home)/projects";
+import Process from "./(home)/process";
+import Trusted from "./(home)/trusted";
+import Award from "./(home)/award";
 
 const Home: React.FC = () => {
   return (
@@ -15,6 +18,13 @@ const Home: React.FC = () => {
       <Solutions />
       <Technology />
       <Strategy />
+    
+      <Projects />
+       <Process />
+     <Trusted />
+
+    
+     
     </main>
   );
 };

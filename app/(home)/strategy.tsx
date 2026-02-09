@@ -59,7 +59,7 @@ const Strategy = () => {
             </div>
 
             <div className="space-y-6">
-              <h2 className="text-5xl md:text-4xl font-black text-foreground leading-[1.1]">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
                 Download Your Free <br />
                 <span className="text-blue-500">Digital Transformation Playbook</span>
               </h2>
