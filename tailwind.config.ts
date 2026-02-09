@@ -8,8 +8,15 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "1rem",
+    },
     extend: {
-      colors: {},
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+      },
       keyframes: {
         "accordion-down": {
           from: {
