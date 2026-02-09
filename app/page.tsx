@@ -1,3 +1,5 @@
+"use client";
+import React from "react";
 import Navbar from "@/src/components/navbar";
 import Hero from "./(home)/hero";
 import Solutions from "./(home)/solutions";
@@ -8,6 +10,12 @@ import Projects from "./(home)/projects";
 import Process from "./(home)/process";
 import Trusted from "./(home)/trusted";
 import Award from "./(home)/award";
+import Experience from "./(home)/experience";
+import Choose from "./(home)/choose";
+import Faqs from "./(home)/faqs";
+import Transform from "./(home)/transform";
+import Contact from "./(home)/contact";
+import Footer from "@/src/components/footer";
 
 const Home: React.FC = () => {
   return (
@@ -18,13 +26,16 @@ const Home: React.FC = () => {
       <Solutions />
       <Technology />
       <Strategy />
-    
+      <Experience />
       <Projects />
-       <Process />
-     <Trusted />
-
-    
-     
+      <Process />
+      <Trusted />
+      <Award />
+      <Choose />
+      <Faqs />
+      <Transform />
+      <Contact />
+      <Footer />
     </main>
   );
 };
