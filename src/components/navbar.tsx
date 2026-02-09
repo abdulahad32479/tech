@@ -73,7 +73,7 @@ const Navbar = () => {
           {/* Theme Toggle - Visible on all screens */}
           <button
             onClick={toggleTheme}
-            className="p-2.5 rounded-xl hover:bg-foreground/10 transition-all active:scale-95 shadow-sm  bg-white/30"
+            className="p-2.5 rounded-xl hover:bg-foreground/10 transition-all active:scale-95 shadow-sm  hover:bg-white/30"
             aria-label="Toggle theme"
           >
             {isLightMode ? <Moon size={18} className="text-foreground" /> : <Sun size={18} className="text-foreground" />}

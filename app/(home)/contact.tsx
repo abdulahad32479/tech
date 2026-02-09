@@ -31,7 +31,7 @@ const Contact = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground leading-tight"
           >
             Let's Build Something <br />
             <span className="text-blue-500">Amazing Together</span>
@@ -60,35 +60,35 @@ const Contact = () => {
           >
             {/* Contact Cards */}
             <div className="space-y-4">
-              <div className="p-6 rounded-2xl bg-card/30 border border-white/5 flex items-start gap-4 hover:border-blue-500/30 transition-colors group">
+              <div className="p-6 rounded-2xl bg-card border border-border flex items-start gap-4 hover:border-blue-500/30 transition-colors group">
                 <div className="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center shrink-0 group-hover:bg-blue-500/20 transition-colors">
                   <Phone size={20} className="text-blue-500" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-1">Call Us</h3>
-                  <p className="text-white mb-1">+92 347 587 9566</p>
+                  <h3 className="text-lg font-bold text-foreground mb-1">Call Us</h3>
+                  <p className="text-foreground mb-1">+92 347 587 9566</p>
                   <p className="text-muted/60 text-sm">Mon-Fri, 9AM-6PM PKT</p>
                 </div>
               </div>
 
-              <div className="p-6 rounded-2xl bg-card/30 border border-white/5 flex items-start gap-4 hover:border-blue-500/30 transition-colors group">
+              <div className="p-6 rounded-2xl bg-card border border-border flex items-start gap-4 hover:border-blue-500/30 transition-colors group">
                 <div className="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center shrink-0 group-hover:bg-blue-500/20 transition-colors">
                   <Mail size={20} className="text-blue-500" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-1">Email Us</h3>
-                  <p className="text-white mb-1">info@fabtechsol.com</p>
+                  <h3 className="text-lg font-bold text-foreground mb-1">Email Us</h3>
+                  <p className="text-foreground mb-1">info@fabtechsol.com</p>
                   <p className="text-muted/60 text-sm">24hr response time</p>
                 </div>
               </div>
 
-              <div className="p-6 rounded-2xl bg-card/30 border border-white/5 flex items-start gap-4 hover:border-blue-500/30 transition-colors group">
+              <div className="p-6 rounded-2xl bg-card border border-border flex items-start gap-4 hover:border-blue-500/30 transition-colors group">
                 <div className="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center shrink-0 group-hover:bg-blue-500/20 transition-colors">
                   <MapPin size={20} className="text-blue-500" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-1">Visit Us</h3>
-                  <p className="text-white mb-1">Akbar Plaza</p>
+                  <h3 className="text-lg font-bold text-foreground mb-1">Visit Us</h3>
+                  <p className="text-foreground mb-1">Akbar Plaza</p>
                   <p className="text-muted/60 text-sm">Near Rescue 1122 Sialkot</p>
                 </div>
               </div>
@@ -96,7 +96,7 @@ const Contact = () => {
 
             {/* What to Expect */}
             <div className="p-8 rounded-3xl bg-blue-950/20 border border-blue-500/10">
-              <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+              <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-2">
                 <span className="w-1 h-6 bg-blue-500 rounded-full"></span>
                 What to Expect
               </h3>
@@ -122,34 +122,34 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="lg:col-span-2 p-8 rounded-[32px] bg-card border border-white/5 hover:border-blue-500/20 transition-colors relative"
+            className="lg:col-span-2 p-8 rounded-[32px] bg-card border border-border hover:border-blue-500/20 transition-colors relative"
           >
             <form className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-white ml-1">Your Name *</label>
+                  <label className="text-sm font-medium text-foreground ml-1">Your Name *</label>
                   <input 
                     type="text" 
                     placeholder="John Doe" 
-                    className="w-full px-4 py-3 rounded-xl bg-background border border-white/10 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none text-white placeholder:text-white/20 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none text-foreground placeholder:text-muted/40 transition-all"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-white ml-1">Email Address *</label>
+                  <label className="text-sm font-medium text-foreground ml-1">Email Address *</label>
                   <input 
                     type="email" 
                     placeholder="john@company.com" 
-                    className="w-full px-4 py-3 rounded-xl bg-background border border-white/10 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none text-white placeholder:text-white/20 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none text-foreground placeholder:text-muted/40 transition-all"
                   />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-white ml-1">Project Details *</label>
+                <label className="text-sm font-medium text-foreground ml-1">Project Details *</label>
                 <textarea 
                   rows={6}
                   placeholder="Tell us about your project goals, timeline, and budget..." 
-                  className="w-full px-4 py-3 rounded-xl bg-background border border-white/10 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none text-white placeholder:text-white/20 transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none text-foreground placeholder:text-muted/40 transition-all resize-none"
                 />
                 <p className="text-xs text-muted/40 ml-1">The more details you provide, the better we can help you.</p>
               </div>

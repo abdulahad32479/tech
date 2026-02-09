@@ -19,7 +19,7 @@ const Transform = () => {
             viewport={{ once: true }}
             className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight"
           >
-            <span className="text-white">Ready to Transform</span>
+            <span className="text-foreground">Ready to Transform</span>
             <br />
             <span className="text-blue-500">Your Business?</span>
           </motion.h2>
@@ -44,7 +44,7 @@ const Transform = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="p-8 rounded-3xl bg-card border border-white/5 hover:border-blue-500/30 transition-all duration-300 group relative overflow-hidden"
+            className="p-8 rounded-3xl bg-card border border-border hover:border-blue-500/30 transition-all duration-300 group relative overflow-hidden"
           >
             <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
@@ -53,7 +53,7 @@ const Transform = () => {
                 <MessageSquare size={40} className="text-blue-500" />
               </div>
               
-              <h3 className="text-2xl font-bold text-white mb-3">Start Instant AI Chat</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-3">Start Instant AI Chat</h3>
               <p className="text-muted/60 mb-8 leading-relaxed">
                 Get answers to your questions immediately, explore our portfolio, and discuss your project needs with our AI assistant.
               </p>
@@ -70,19 +70,19 @@ const Transform = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="p-8 rounded-3xl bg-card border border-white/5 hover:border-white/10 transition-all duration-300 group relative overflow-hidden"
+            className="p-8 rounded-3xl bg-card border border-border hover:border-foreground/10 transition-all duration-300 group relative overflow-hidden"
           >
             <div className="relative z-10 flex flex-col items-start h-full">
               <div className="mb-6">
                 <Calendar size={40} className="text-blue-500" />
               </div>
               
-              <h3 className="text-2xl font-bold text-white mb-3">Talk to Human Expert</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-3">Talk to Human Expert</h3>
               <p className="text-muted/60 mb-8 leading-relaxed">
                 Prefer human interaction? Fill out the form below and we'll respond within 24 hours with a detailed proposal.
               </p>
               
-              <button className="w-full mt-auto py-4 rounded-xl border border-white/10 bg-white/5 text-white font-bold flex items-center justify-center gap-2 hover:bg-white hover:text-black transition-all">
+              <button className="w-full mt-auto py-4 rounded-xl border border-foreground/10 bg-foreground/5 text-foreground font-bold flex items-center justify-center gap-2 hover:bg-foreground hover:text-background transition-all">
                 Contact Us <ArrowRight size={18} />
               </button>
             </div>

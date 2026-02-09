@@ -68,7 +68,7 @@ const Choose = () => {
             viewport={{ once: true }}
             className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight"
           >
-            <span className="text-white/60">Why Leading Companies</span>
+            <span className="text-foreground/60">Why Leading Companies</span>
             <br />
             <span className="text-blue-600">Choose FabTechSol</span>
           </motion.h2>
@@ -101,7 +101,7 @@ const Choose = () => {
               </div>
 
               <div className="space-y-3 px-4">
-                <h3 className="text-xl font-bold text-white group-hover:text-blue-500 transition-colors">
+                <h3 className="text-xl font-bold text-foreground group-hover:text-blue-500 transition-colors">
                   {reason.title}
                 </h3>
                 <p className="text-[14px] font-medium text-muted/50 leading-relaxed md:px-2">

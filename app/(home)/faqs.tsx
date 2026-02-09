@@ -57,7 +57,7 @@ const Faqs = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold text-white"
+            className="text-3xl md:text-5xl font-bold text-foreground"
           >
             Frequently Asked Questions
           </motion.h2>
@@ -84,7 +84,7 @@ const Faqs = () => {
               className={`border rounded-xl overflow-hidden transition-all duration-300 ${
                 activeIndex === index 
                   ? 'bg-blue-900/10 border-blue-500/30 shadow-[0_0_15px_rgba(37,99,235,0.1)]' 
-                  : 'bg-card/30 border-white/5 hover:border-white/10'
+                  : 'bg-card border-border hover:border-foreground/10'
               }`}
             >
               <button
@@ -92,7 +92,7 @@ const Faqs = () => {
                 className="w-full flex items-center justify-between p-6 text-left"
               >
                 <span className={`font-semibold text-lg transition-colors ${
-                  activeIndex === index ? 'text-blue-400' : 'text-white'
+                  activeIndex === index ? 'text-blue-400' : 'text-foreground'
                 }`}>
                   {faq.question}
                 </span>

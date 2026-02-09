@@ -172,7 +172,7 @@ const ConsultationCard = () => {
         )}
       </AnimatePresence>
 
-      <div className="mt-8 pt-6 border-t border-white/5 space-y-4">
+      <div className="mt-8 pt-6 border-t border-border space-y-4">
         <div className="flex items-center gap-3 py-2 px-4 rounded-2xl bg-blue-600/5 border border-blue-500/10">
            <Check className="text-green-500 shadow-sm" size={16} />
            <span className="text-[12px] font-bold text-foreground opacity-80">
@@ -366,7 +366,7 @@ const ApplyCard = () => {
         </button>
       </div>
       
-      <p className="text-[10px] font-bold text-white opacity-40 text-center tracking-tight">
+      <p className="text-[10px] font-bold text-foreground opacity-40 text-center tracking-tight">
         Your information is secure and only shared with our hiring team
       </p>
     </div>
@@ -524,7 +524,7 @@ const Chat = () => {
               </div>
 
               {/* Quick Questions */}
-              <div className="space-y-4 text-white">
+              <div className="space-y-4 text-foreground">
                 <p className="text-sm font-black opacity-50 tracking-widest uppercase">Quick questions:</p>
                 <div className="flex flex-wrap gap-3">
                   {quickQuestions.map((q) => (
