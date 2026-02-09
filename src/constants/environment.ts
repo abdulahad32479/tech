@@ -5,7 +5,7 @@ namespace env {
     11155111: `https://sepolia.infura.io/v3/${process.env.NEXT_PUBLIC_INFURA_KEY}`,
   };
 
-  export const DEFAULT_CHAIN: number = process.env.NEXT_PUBLIC_DEFAULT_CHAIN_ID;
+  export const DEFAULT_CHAIN: number = process.env.NEXT_PUBLIC_DEFAULT_CHAIN_ID ? parseInt(process.env.NEXT_PUBLIC_DEFAULT_CHAIN_ID) : 11155111;
 
 }
 
