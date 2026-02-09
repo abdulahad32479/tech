@@ -68,14 +68,14 @@ const ConsultationCard = () => {
   }
 
   return (
-    <div className="p-6 rounded-[24px] bg-card border border-border w-full max-w-md mt-4 shadow-2xl relative overflow-hidden text-foreground">
+    <div className="p-4 md:p-6 rounded-[20px] md:rounded-[24px] bg-card border border-border w-full max-w-md mt-4 shadow-2xl relative overflow-hidden text-foreground">
       {/* Header */}
-      <div className="flex items-center justify-between mb-8">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center">
-            <Calendar className="text-blue-500" size={20} />
+      <div className="flex items-center justify-between mb-6 md:mb-8">
+        <div className="flex items-center gap-2 md:gap-3">
+          <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center">
+            <Calendar className="text-blue-500" size={16} />
           </div>
-          <h4 className="font-bold text-foreground text-lg">Book Free Consultation</h4>
+          <h4 className="font-bold text-foreground text-sm md:text-lg">Book Free Consultation</h4>
         </div>
       </div>
 
@@ -88,7 +88,7 @@ const ConsultationCard = () => {
             exit={{ opacity: 0, x: -20 }}
             className="space-y-6"
           >
-            <p className="text-[16px] font-bold opacity-60 mb-4 text-foreground">Select a date:</p>
+            <p className="text-sm md:text-[16px] font-bold opacity-60 mb-3 md:mb-4 text-foreground">Select a date:</p>
             <div className="grid grid-cols-2 gap-3">
               {dates.map(date => (
                 <button 
@@ -97,14 +97,14 @@ const ConsultationCard = () => {
                     setSelectedDate(date);
                     setStep(2);
                   }}
-                  className={`flex items-center gap-2 px-4 py-3 rounded-xl border transition-all text-[14px] font-bold ${
+                  className={`flex items-center gap-1 md:gap-2 px-2 md:px-4 py-2 md:py-3 rounded-lg md:rounded-xl border transition-all text-[11px] md:text-[14px] font-bold ${
                     selectedDate === date 
                       ? 'bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-600/20' 
                       : 'bg-foreground/[0.03] border-border text-muted hover:border-foreground/20'
                   }`}
                 >
-                  <Calendar size={14} className={selectedDate === date ? 'text-white' : 'opacity-50'} />
-                  {date}
+                  <Calendar size={12} className={`${selectedDate === date ? 'text-white' : 'opacity-50'} hidden sm:block`} />
+                  <span className="text-center w-full">{date}</span>
                 </button>
               ))}
             </div>
@@ -126,33 +126,33 @@ const ConsultationCard = () => {
             </button>
 
             <div>
-              <p className="text-[16px] font-bold opacity-60 mb-4 text-foreground">Select a time:</p>
-              <div className="grid grid-cols-3 gap-3">
+              <p className="text-sm md:text-[16px] font-bold opacity-60 mb-3 md:mb-4 text-foreground">Select a time:</p>
+              <div className="grid grid-cols-3 gap-2 md:gap-3">
                 {times.map(time => (
                   <button 
                     key={time} 
                     onClick={() => setSelectedTime(time)}
-                    className={`flex items-center justify-center gap-2 px-3 py-3 rounded-xl border transition-all text-[12px] font-bold ${
+                    className={`flex flex-col md:flex-row items-center justify-center gap-1 px-2 md:px-3 py-2 md:py-3 rounded-lg md:rounded-xl border transition-all text-[10px] md:text-[12px] font-bold ${
                       selectedTime === time 
                         ? 'bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-600/20' 
                         : 'bg-foreground/[0.03] border-border text-muted hover:border-foreground/20'
                     }`}
                   >
-                    <Clock size={14} className={selectedTime === time ? 'text-white' : 'opacity-50'} />
-                    {time}
+                    <Clock size={12} className={`${selectedTime === time ? 'text-white' : 'opacity-50'} hidden md:block`} />
+                    <span>{time}</span>
                   </button>
                 ))}
               </div>
             </div>
 
             <div>
-              <p className="text-[16px] font-bold text-muted mb-4">Your timezone:</p>
+              <p className="text-sm md:text-[16px] font-bold text-muted mb-3 md:mb-4">Your timezone:</p>
               <div className="relative group">
                 <Globe className="absolute left-4 top-1/2 -translate-y-1/2 text-muted" size={18} />
                 <select 
                   value={timezone}
                   onChange={(e) => setTimezone(e.target.value)}
-                  className="w-full pl-12 pr-10 py-4 rounded-xl bg-background border border-foreground/10 outline-none focus:border-blue-500/50 transition-all text-[16px] font-bold text-foreground appearance-none cursor-pointer"
+                  className="w-full pl-10 md:pl-12 pr-8 md:pr-10 py-3 md:py-4 rounded-lg md:rounded-xl bg-background border border-foreground/10 outline-none focus:border-blue-500/50 transition-all text-sm md:text-[16px] font-bold text-foreground appearance-none cursor-pointer"
                 >
                   <option value="Pakistan (PKT)">Pakistan (PKT)</option>
                   <option value="London (GMT)">London (GMT)</option>
@@ -164,7 +164,7 @@ const ConsultationCard = () => {
 
             <button 
               onClick={() => setIsSubmitted(true)}
-              className="w-full py-4 rounded-xl bg-blue-600 text-white font-black text-lg shadow-xl shadow-blue-600/30 hover:bg-blue-700 transition-all active:scale-95"
+              className="w-full py-3 md:py-4 rounded-lg md:rounded-xl bg-blue-600 text-white font-black text-base md:text-lg shadow-xl shadow-blue-600/30 hover:bg-blue-700 transition-all active:scale-95"
             >
               Continue
             </button>
@@ -220,19 +220,19 @@ const ApplyCard = () => {
   }
 
   return (
-    <div className="p-6 rounded-[24px] bg-card border border-border w-full max-w-sm mt-4 shadow-2xl relative overflow-hidden text-foreground">
+    <div className="p-4 md:p-6 rounded-[20px] md:rounded-[24px] bg-card border border-border w-full max-w-sm mt-4 shadow-2xl relative overflow-hidden text-foreground">
       {/* Header */}
-      <div className="flex items-center justify-between mb-8">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center">
-            <Briefcase className="text-blue-500" size={20} />
+      <div className="flex items-center justify-between mb-6 md:mb-8">
+        <div className="flex items-center gap-2 md:gap-3">
+          <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center">
+            <Briefcase className="text-blue-500" size={16} />
           </div>
-          <h4 className="font-bold text-foreground text-lg">Quick Apply</h4>
+          <h4 className="font-bold text-foreground text-sm md:text-lg">Quick Apply</h4>
         </div>
       </div>
       
       {/* Stepper */}
-      <div className="relative flex items-center justify-between mb-10 px-2">
+      <div className="relative flex items-center justify-between mb-8 md:mb-10 px-1 md:px-2">
         {/* Background Line */}
         <div className="absolute top-4 left-0 w-full h-[1px] bg-foreground/10 -z-10" />
         {steps.map((s, idx) => {
@@ -242,10 +242,10 @@ const ApplyCard = () => {
           
           return (
             <div key={sNum} className="flex flex-col items-center gap-3">
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-black transition-all ${isActive || isCompleted ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/40' : 'bg-card border border-border text-muted'}`}>
+              <div className={`w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center text-[10px] md:text-xs font-black transition-all ${isActive || isCompleted ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/40' : 'bg-card border border-border text-muted'}`}>
                 {isCompleted ? <Check size={14} /> : sNum}
               </div>
-              <span className={`text-[10px] font-bold uppercase tracking-widest ${isActive ? 'text-foreground underline underline-offset-4 decoration-blue-500/50' : isCompleted ? 'text-foreground/60' : 'text-muted'}`}>
+              <span className={`text-[9px] md:text-[10px] font-bold uppercase tracking-widest ${isActive ? 'text-foreground underline underline-offset-4 decoration-blue-500/50' : isCompleted ? 'text-foreground/60' : 'text-muted'}`}>
                 {s.name}
               </span>
             </div>
@@ -259,20 +259,20 @@ const ApplyCard = () => {
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="space-y-4 mb-8">
             <div className="relative group">
               <User className="absolute left-4 top-1/2 -translate-y-1/2 text-muted group-focus-within:text-blue-500 transition-all" size={18} />
-              <input type="text" placeholder="Full name *" className="w-full pl-12 pr-4 py-4 rounded-xl bg-transparent border border-border outline-none focus:border-blue-500/30 transition-all text-[16px] font-bold text-foreground placeholder:text-muted" />
+              <input type="text" placeholder="Full name *" className="w-full pl-10 md:pl-12 pr-4 py-3 md:py-4 rounded-lg md:rounded-xl bg-transparent border border-border outline-none focus:border-blue-500/30 transition-all text-sm md:text-[16px] font-bold text-foreground placeholder:text-muted" />
             </div>
             <div className="relative group">
               <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-foreground opacity-40 group-focus-within:opacity-100 transition-all" size={18} />
-              <input type="email" placeholder="Email address *" className="w-full pl-12 pr-4 py-4 rounded-xl bg-transparent border border-foreground/10 outline-none focus:border-blue-500/30 transition-all text-[16px] font-bold text-foreground placeholder:text-foreground/20" />
+              <input type="email" placeholder="Email address *" className="w-full pl-10 md:pl-12 pr-4 py-3 md:py-4 rounded-lg md:rounded-xl bg-transparent border border-foreground/10 outline-none focus:border-blue-500/30 transition-all text-sm md:text-[16px] font-bold text-foreground placeholder:text-foreground/20" />
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div className="relative group">
                 <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-foreground opacity-40 group-focus-within:opacity-100 transition-all" size={18} />
-                <input type="text" placeholder="Phone" className="w-full pl-12 pr-4 py-4 rounded-xl bg-transparent border border-foreground/10 outline-none focus:border-blue-500/30 transition-all text-[16px] font-bold text-foreground placeholder:text-foreground/20" />
+                <input type="text" placeholder="Phone" className="w-full pl-10 md:pl-12 pr-4 py-3 md:py-4 rounded-lg md:rounded-xl bg-transparent border border-foreground/10 outline-none focus:border-blue-500/30 transition-all text-sm md:text-[16px] font-bold text-foreground placeholder:text-foreground/20" />
               </div>
               <div className="relative group">
                 <MessageSquare className="absolute left-4 top-1/2 -translate-y-1/2 text-foreground opacity-40 group-focus-within:opacity-100 transition-all" size={18} />
-                <input type="text" placeholder="WhatsApp" className="w-full pl-12 pr-4 py-4 rounded-xl bg-transparent border border-foreground/10 outline-none focus:border-blue-500/30 transition-all text-[16px] font-bold text-foreground placeholder:text-foreground/20" />
+                <input type="text" placeholder="WhatsApp" className="w-full pl-10 md:pl-12 pr-4 py-3 md:py-4 rounded-lg md:rounded-xl bg-transparent border border-foreground/10 outline-none focus:border-blue-500/30 transition-all text-sm md:text-[16px] font-bold text-foreground placeholder:text-foreground/20" />
               </div>
             </div>
           </motion.div>
@@ -282,7 +282,7 @@ const ApplyCard = () => {
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="space-y-4 mb-8">
             <div className="relative group cursor-pointer">
               <Briefcase className="absolute left-4 top-1/2 -translate-y-1/2 text-foreground/40 group-focus-within:text-blue-500 transition-all" size={18} />
-              <select className="w-full pl-12 pr-10 py-4 rounded-xl bg-background border border-foreground/10 outline-none focus:border-blue-500/50 transition-all text-[16px] font-bold text-foreground/60 appearance-none">
+              <select className="w-full pl-10 md:pl-12 pr-8 md:pr-10 py-3 md:py-4 rounded-lg md:rounded-xl bg-background border border-foreground/10 outline-none focus:border-blue-500/50 transition-all text-sm md:text-[16px] font-bold text-foreground/60 appearance-none">
                 <option value="">Select position *</option>
                 <option value="frontend">Frontend Developer</option>
                 <option value="backend">Backend Developer</option>
@@ -291,7 +291,7 @@ const ApplyCard = () => {
             </div>
             <div className="relative group cursor-pointer">
               <Clock className="absolute left-4 top-1/2 -translate-y-1/2 text-foreground/40 group-focus-within:text-blue-500 transition-all" size={18} />
-              <select className="w-full pl-12 pr-10 py-4 rounded-xl bg-background border border-foreground/10 outline-none focus:border-blue-500/50 transition-all text-[16px] font-bold text-foreground/60 appearance-none">
+              <select className="w-full pl-10 md:pl-12 pr-8 md:pr-10 py-3 md:py-4 rounded-lg md:rounded-xl bg-background border border-foreground/10 outline-none focus:border-blue-500/50 transition-all text-sm md:text-[16px] font-bold text-foreground/60 appearance-none">
                 <option value="">Years of experience *</option>
                 <option value="junior">1-2 years</option>
                 <option value="mid">3-5 years</option>
@@ -301,7 +301,7 @@ const ApplyCard = () => {
             </div>
             <div className="relative group">
               <Code className="absolute left-4 top-1/2 -translate-y-1/2 text-foreground/40 group-focus-within:text-blue-500 transition-all" size={18} />
-              <input type="text" placeholder="Key skills * (e.g. React, Node.js)" className="w-full pl-12 pr-4 py-4 rounded-xl bg-transparent border border-foreground/10 outline-none focus:border-blue-500/30 transition-all text-[16px] font-bold text-foreground placeholder:text-foreground/20" />
+              <input type="text" placeholder="Key skills * (e.g. React, Node.js)" className="w-full pl-10 md:pl-12 pr-4 py-3 md:py-4 rounded-lg md:rounded-xl bg-transparent border border-foreground/10 outline-none focus:border-blue-500/30 transition-all text-sm md:text-[16px] font-bold text-foreground placeholder:text-foreground/20" />
             </div>
           </motion.div>
         )}

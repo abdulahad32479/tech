@@ -42,6 +42,18 @@ const Navbar = () => {
     setIsLightMode(document.body.classList.contains("light-mode"));
   }, []);
 
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
+
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 py-4 transition-all duration-300 ${
       hasScrolled 
@@ -108,23 +120,23 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden overflow-hidden bg-card border-b border-foreground/10"
           >
-            <div className="container py-8 space-y-6">
-              <div className="flex flex-col gap-6">
+            <div className="container py-6 md:py-8 space-y-4">
+              <div className="flex flex-col gap-3">
                 {navLinks.map((link) => (
                   <button 
                     key={link.id} 
                     onClick={() => scrollToSection(link.id)}
-                    className="text-left py-2 text-lg font-bold border-b border-foreground/5 opacity-80 hover:opacity-100 hover:text-blue-500 transition-all"
+                    className="text-left px-4 py-3 text-base md:text-lg font-bold bg-foreground/5 hover:bg-blue-500/10 rounded-lg border border-transparent hover:border-blue-500/20 opacity-80 hover:opacity-100 hover:text-blue-500 transition-all"
                   >
                     {link.name}
                   </button>
                 ))}
               </div>
-              <div className="flex flex-col gap-3 pt-4">
-                <button className="w-full py-4 rounded-xl border border-foreground/10 font-black text-sm uppercase tracking-widest bg-foreground/5">
+              <div className="flex flex-col gap-3 pt-2">
+                <button className="w-full py-3 md:py-4 rounded-lg md:rounded-xl border border-foreground/10 font-bold text-sm uppercase tracking-widest bg-foreground/5 hover:bg-foreground/10 transition-all">
                   Book Consultation
                 </button>
-                <button className="w-full py-4 rounded-xl bg-blue-600 text-white font-black text-sm uppercase tracking-widest shadow-lg shadow-blue-600/40">
+                <button className="w-full py-3 md:py-4 rounded-lg md:rounded-xl bg-blue-600 text-white font-bold text-sm uppercase tracking-widest shadow-lg shadow-blue-600/40 hover:bg-blue-700 transition-all">
                   Get Started
                 </button>
               </div>
