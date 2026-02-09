@@ -77,12 +77,12 @@ const Technology = () => {
 
         {/* Custom Tabs */}
         <div className="flex justify-center mb-16 px-4">
-          <div className="flex bg-card p-2 rounded-[20px] border border-border backdrop-blur-sm w-full max-w-2xl justify-between">
+          <div className="flex bg-card p-2 rounded-[20px] border border-border w-full max-w-2xl justify-between overflow-x-auto">
             {tabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`flex-1 py-4 px-2 rounded-[14px] font-black text-sm transition-all duration-300 relative ${
+                className={`flex-1 py-3 md:py-4 px-1 md:px-2 rounded-[14px] font-black text-[10px] md:text-sm transition-all duration-300 relative whitespace-nowrap ${
                   activeTab === tab 
                   ? "text-white" 
                   : "text-foreground/40 hover:text-foreground/60"

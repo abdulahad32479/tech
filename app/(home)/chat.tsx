@@ -541,12 +541,12 @@ const Chat = () => {
             </div>
 
             {/* Bottom Navigation Hints */}
-            <div className="mt-12 flex items-center justify-center gap-12 font-black text-[12px] opacity-40 uppercase tracking-widest">
-              <span className="cursor-pointer hover:opacity-100 flex items-center gap-2">View Case Studies <ArrowRight size={14} /></span>
-              <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
-              <span className="cursor-pointer hover:opacity-100 flex items-center gap-2">Read Client Reviews <ArrowRight size={14} /></span>
-              <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
-              <span className="cursor-pointer hover:opacity-100 flex items-center gap-2">Explore Services <ArrowRight size={14} /></span>
+            <div className="mt-12 flex flex-wrap items-center justify-center gap-4 md:gap-12 font-black text-[10px] md:text-[12px] opacity-40 uppercase tracking-widest">
+              <span className="cursor-pointer hover:opacity-100 flex items-center gap-2 whitespace-nowrap">View Case Studies <ArrowRight size={14} /></span>
+              <div className="hidden md:block w-1.5 h-1.5 rounded-full bg-foreground" />
+              <span className="cursor-pointer hover:opacity-100 flex items-center gap-2 whitespace-nowrap">Read Client Reviews <ArrowRight size={14} /></span>
+              <div className="hidden md:block w-1.5 h-1.5 rounded-full bg-foreground" />
+              <span className="cursor-pointer hover:opacity-100 flex items-center gap-2 whitespace-nowrap">Explore Services <ArrowRight size={14} /></span>
             </div>
           </motion.div>
         )}
