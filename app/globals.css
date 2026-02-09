@@ -5,11 +5,19 @@
 :root {
   --background: #0d0e11;
   --foreground: #ffffff;
+  --card: rgba(255, 255, 255, 0.03);
+  --card-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
+  --muted: rgba(255, 255, 255, 0.4);
 }
 
 body.light-mode {
   --background: #ffffff;
   --foreground: #0d0e11;
+  --card: #f8f9fa;
+  --card-foreground: #0d0e11;
+  --border: rgba(0, 0, 0, 0.1);
+  --muted: rgba(0, 0, 0, 0.4);
 }
 
 @layer base {

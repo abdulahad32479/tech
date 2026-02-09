@@ -50,14 +50,14 @@ const ConsultationCard = () => {
       <motion.div 
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="p-8 rounded-[32px] bg-background/50 backdrop-blur-xl border border-green-500/20 w-full max-w-sm mt-4 shadow-2xl flex flex-col items-center text-center gap-6"
+        className="p-8 rounded-[32px] bg-card backdrop-blur-xl border border-border w-full max-w-sm mt-4 shadow-2xl flex flex-col items-center text-center gap-6"
       >
         <div className="w-20 h-20 rounded-full bg-green-500/10 border border-green-500/20 flex items-center justify-center shadow-[0_0_30px_rgba(34,197,94,0.1)]">
           <Check className="text-green-500" size={40} strokeWidth={3} />
         </div>
         <div className="space-y-2">
           <h4 className="text-2xl font-black text-foreground">Session Booked!</h4>
-          <p className="text-[16px] font-bold text-foreground/40 px-4">
+          <p className="text-[16px] font-bold text-muted px-4">
             Thank you for booking! Our team will join you on <span className="text-blue-500 font-black">{selectedDate}</span> at <span className="text-blue-500 font-black">{selectedTime}</span>.
           </p>
         </div>
@@ -68,7 +68,7 @@ const ConsultationCard = () => {
   }
 
   return (
-    <div className="p-6 rounded-[24px] bg-card border border-foreground/10 w-full max-w-md mt-4 shadow-2xl relative overflow-hidden">
+    <div className="p-6 rounded-[24px] bg-card border border-border w-full max-w-md mt-4 shadow-2xl relative overflow-hidden text-foreground">
       {/* Header */}
       <div className="flex items-center justify-between mb-8">
         <div className="flex items-center gap-3">
@@ -100,7 +100,7 @@ const ConsultationCard = () => {
                   className={`flex items-center gap-2 px-4 py-3 rounded-xl border transition-all text-[14px] font-bold ${
                     selectedDate === date 
                       ? 'bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-600/20' 
-                      : 'bg-foreground/5 border-white/10 text-white/60 hover:border-white/20'
+                      : 'bg-foreground/[0.03] border-border text-muted hover:border-foreground/20'
                   }`}
                 >
                   <Calendar size={14} className={selectedDate === date ? 'text-white' : 'opacity-50'} />
@@ -135,7 +135,7 @@ const ConsultationCard = () => {
                     className={`flex items-center justify-center gap-2 px-3 py-3 rounded-xl border transition-all text-[12px] font-bold ${
                       selectedTime === time 
                         ? 'bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-600/20' 
-                        : 'bg-foreground/5 border-white/10 text-white/60 hover:border-white/20'
+                        : 'bg-foreground/[0.03] border-border text-muted hover:border-foreground/20'
                     }`}
                   >
                     <Clock size={14} className={selectedTime === time ? 'text-white' : 'opacity-50'} />
@@ -146,9 +146,9 @@ const ConsultationCard = () => {
             </div>
 
             <div>
-              <p className="text-[16px] font-bold opacity-60 mb-4 text-foreground">Your timezone:</p>
+              <p className="text-[16px] font-bold text-muted mb-4">Your timezone:</p>
               <div className="relative group">
-                <Globe className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40" size={18} />
+                <Globe className="absolute left-4 top-1/2 -translate-y-1/2 text-muted" size={18} />
                 <select 
                   value={timezone}
                   onChange={(e) => setTimezone(e.target.value)}
@@ -175,13 +175,13 @@ const ConsultationCard = () => {
       <div className="mt-8 pt-6 border-t border-white/5 space-y-4">
         <div className="flex items-center gap-3 py-2 px-4 rounded-2xl bg-blue-600/5 border border-blue-500/10">
            <Check className="text-green-500 shadow-sm" size={16} />
-           <span className="text-[12px] font-bold text-white/80">
+           <span className="text-[12px] font-bold text-foreground opacity-80">
              {selectedDate ? `${selectedDate.includes(',') ? selectedDate : selectedDate}` : "Select a date"} 
              {selectedTime ? ` at ${selectedTime}` : ""} 
              {selectedTime ? ` (${timezone})` : ""}
            </span>
         </div>
-        <p className="text-[11px] font-bold opacity-40 text-foreground text-center">30-minute free consultation with our team</p>
+        <p className="text-[11px] font-bold text-muted text-center">30-minute free consultation with our team</p>
       </div>
     </div>
   );
@@ -202,14 +202,14 @@ const ApplyCard = () => {
       <motion.div 
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="p-8 rounded-[32px] bg-background/50 backdrop-blur-xl border border-green-500/20 w-full max-sm mt-4 shadow-2xl flex flex-col items-center text-center gap-6"
+        className="p-8 rounded-[32px] bg-card backdrop-blur-xl border border-border w-full max-sm mt-4 shadow-2xl flex flex-col items-center text-center gap-6"
       >
         <div className="w-20 h-20 rounded-full bg-green-500/10 border border-green-500/20 flex items-center justify-center shadow-[0_0_30px_rgba(34,197,94,0.1)]">
           <Check className="text-green-500" size={40} strokeWidth={3} />
         </div>
         <div className="space-y-2">
           <h4 className="text-2xl font-black text-foreground">Application Sent!</h4>
-          <p className="text-[16px] font-bold text-foreground/40 px-4">
+          <p className="text-[16px] font-bold text-muted px-4">
             Thank you for applying. Our hiring team will review your profile and get back to you shortly.
           </p>
         </div>
@@ -220,7 +220,7 @@ const ApplyCard = () => {
   }
 
   return (
-    <div className="p-6 rounded-[24px] bg-card border border-foreground/10 w-full max-w-sm mt-4 shadow-2xl relative overflow-hidden">
+    <div className="p-6 rounded-[24px] bg-card border border-border w-full max-w-sm mt-4 shadow-2xl relative overflow-hidden text-foreground">
       {/* Header */}
       <div className="flex items-center justify-between mb-8">
         <div className="flex items-center gap-3">
@@ -234,7 +234,7 @@ const ApplyCard = () => {
       {/* Stepper */}
       <div className="relative flex items-center justify-between mb-10 px-2">
         {/* Background Line */}
-        <div className="absolute top-4 left-0 w-full h-[1px] bg-white/10 -z-10" />
+        <div className="absolute top-4 left-0 w-full h-[1px] bg-foreground/10 -z-10" />
         {steps.map((s, idx) => {
           const sNum = idx + 1;
           const isActive = step === sNum;
@@ -242,10 +242,10 @@ const ApplyCard = () => {
           
           return (
             <div key={sNum} className="flex flex-col items-center gap-3">
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-black transition-all ${isActive || isCompleted ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/40' : 'bg-[#1a1b1e] border border-white/10 text-white/40'}`}>
+              <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-black transition-all ${isActive || isCompleted ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/40' : 'bg-card border border-border text-muted'}`}>
                 {isCompleted ? <Check size={14} /> : sNum}
               </div>
-              <span className={`text-[10px] font-bold uppercase tracking-widest ${isActive ? 'text-white underline underline-offset-4 decoration-blue-500/50' : isCompleted ? 'text-white/60' : 'text-white/40'}`}>
+              <span className={`text-[10px] font-bold uppercase tracking-widest ${isActive ? 'text-foreground underline underline-offset-4 decoration-blue-500/50' : isCompleted ? 'text-foreground/60' : 'text-muted'}`}>
                 {s.name}
               </span>
             </div>
@@ -258,8 +258,8 @@ const ApplyCard = () => {
         {step === 1 && (
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="space-y-4 mb-8">
             <div className="relative group">
-              <User className="absolute left-4 top-1/2 -translate-y-1/2 text-foreground opacity-40 group-focus-within:opacity-100 transition-all" size={18} />
-              <input type="text" placeholder="Full name *" className="w-full pl-12 pr-4 py-4 rounded-xl bg-transparent border border-foreground/10 outline-none focus:border-blue-500/30 transition-all text-[16px] font-bold text-foreground placeholder:text-foreground/20" />
+              <User className="absolute left-4 top-1/2 -translate-y-1/2 text-muted group-focus-within:text-blue-500 transition-all" size={18} />
+              <input type="text" placeholder="Full name *" className="w-full pl-12 pr-4 py-4 rounded-xl bg-transparent border border-border outline-none focus:border-blue-500/30 transition-all text-[16px] font-bold text-foreground placeholder:text-muted" />
             </div>
             <div className="relative group">
               <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-foreground opacity-40 group-focus-within:opacity-100 transition-all" size={18} />
@@ -309,8 +309,8 @@ const ApplyCard = () => {
         {step === 3 && (
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="space-y-4 mb-8">
             <div className="relative group">
-              <Linkedin className="absolute left-4 top-1/2 -translate-y-1/2 text-white opacity-40 group-focus-within:opacity-100 transition-all" size={18} />
-              <input type="text" placeholder="LinkedIn profile URL" className="w-full pl-12 pr-4 py-4 rounded-xl bg-transparent border border-white/10 outline-none focus:border-white/30 transition-all text-sm font-bold text-white placeholder:text-white/20" />
+              <Linkedin className="absolute left-4 top-1/2 -translate-y-1/2 text-muted group-focus-within:text-blue-500 transition-all" size={18} />
+              <input type="text" placeholder="LinkedIn profile URL" className="w-full pl-12 pr-4 py-4 rounded-xl bg-transparent border border-border outline-none focus:border-blue-500/30 transition-all text-sm font-bold text-foreground placeholder:text-muted" />
             </div>
             <div className="relative group">
               <Globe className="absolute left-4 top-1/2 -translate-y-1/2 text-white opacity-40 group-focus-within:opacity-100 transition-all" size={18} />
@@ -342,9 +342,9 @@ const ApplyCard = () => {
         {step > 1 && (
           <button 
             onClick={() => setStep(step - 1)}
-            className="flex-1 py-4 rounded-xl bg-[#1a1b1e] border border-white/10 text-white font-black text-md flex items-center justify-center gap-3 hover:bg-[#25262b] transition-all"
+            className="flex-1 py-4 rounded-xl bg-card border border-border text-foreground font-black text-md flex items-center justify-center gap-3 hover:bg-foreground/10 transition-all"
           >
-            <ChevronDown className="rotate-90 opacity-40" size={16} />
+            <ChevronDown className="rotate-90 text-muted" size={16} />
             Back
           </button>
         )}
@@ -502,7 +502,7 @@ const Chat = () => {
               </div>
 
               {/* Main Input Box */}
-              <div className="relative mb-8 bg-white rounded-3xl p-6 shadow-xl text-black">
+              <div className="relative mb-8 bg-card rounded-3xl p-6 shadow-xl border border-border">
                 <div className="flex items-center gap-4 mb-4">
                   <Search className="text-blue-500" size={24} />
                   <input 
@@ -510,7 +510,7 @@ const Chat = () => {
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     placeholder={placeholder}
-                    className="w-full bg-transparent border-none outline-none text-[16px] md:text-lg font-bold text-black placeholder:opacity-40"
+                    className="w-full bg-transparent border-none outline-none text-[16px] md:text-lg font-bold text-foreground placeholder:opacity-40"
                     onKeyDown={(e) => e.key === 'Enter' && handleSend(inputValue)}
                   />
                 </div>
@@ -531,7 +531,7 @@ const Chat = () => {
                     <button 
                       key={q}
                       onClick={() => handleSend(q)}
-                      className="px-6 py-3 rounded-2xl bg-foreground/5 border border-foreground/10 text-sm font-bold opacity-80 hover:bg-blue-600 hover:text-white hover:border-blue-500 transition-all"
+                      className="px-6 py-3 rounded-2xl bg-card border border-border text-sm font-bold text-foreground/80 hover:bg-blue-600 hover:text-white hover:border-blue-500 transition-all"
                     >
                       {q}
                     </button>
@@ -595,18 +595,18 @@ const Chat = () => {
                       {/* Avatar */}
                       <div className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center shrink-0 border transition-all shadow-lg ${
                         m.role === 'assistant' 
-                          ? 'bg-card border-foreground/10 shadow-blue-500/5' 
-                          : 'bg-blue-600/20 border-blue-500/40 shadow-blue-600/20'
+                          ? 'bg-card border-border shadow-blue-500/5' 
+                          : 'bg-blue-600 text-white border-blue-500/40 shadow-blue-600/20'
                       }`}>
-                        {m.role === 'assistant' ? <Bot className="text-blue-500" size={20} /> : <User className="text-blue-400" size={20} />}
+                        {m.role === 'assistant' ? <Bot className="text-blue-500" size={20} /> : <User className="text-white" size={20} />}
                       </div>
 
                       {/* Content */}
                       <div className={`flex flex-col w-full max-w-[90%] md:max-w-[85%] ${m.role === 'user' ? 'items-end' : 'items-start'}`}>
                         <div className={`p-4 md:p-5 rounded-[20px] md:rounded-[24px] font-medium ${
                           m.role === 'assistant' 
-                            ? 'bg-card border border-foreground/5 text-foreground/90' 
-                            : 'bg-blue-600/10 border border-blue-500/20 text-blue-600 dark:text-blue-100'
+                            ? 'bg-card border border-border text-foreground/90' 
+                            : 'bg-blue-600 text-white shadow-lg shadow-blue-600/10'
                         }`}>
                           {m.content}
                         </div>
@@ -630,14 +630,14 @@ const Chat = () => {
                 <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-4 md:mb-6">
                   <button 
                     onClick={() => handleSend("", 'consultation')}
-                    className="flex items-center gap-2 px-4 md:px-5 py-2 md:py-2.5 rounded-xl border border-foreground/5 bg-foreground/5 font-bold text-[11px] md:text-[13px] hover:border-blue-500/50 hover:bg-foreground/10 transition-all text-foreground/70 group"
+                    className="flex items-center gap-2 px-4 md:px-5 py-2 md:py-2.5 rounded-xl border border-border bg-foreground/5 font-bold text-[11px] md:text-[13px] hover:border-blue-500/50 hover:bg-foreground/10 transition-all text-foreground/70 group"
                   >
                     <Calendar size={14} className="text-blue-500 group-hover:scale-110 transition-transform md:w-[16px] md:h-[16px]" /> 
                     Book Free Consultation
                   </button>
                   <button 
                     onClick={() => handleSend("", 'apply')}
-                    className="flex items-center gap-2 px-4 md:px-5 py-2 md:py-2.5 rounded-xl border border-foreground/5 bg-foreground/5 font-bold text-[11px] md:text-[13px] hover:border-blue-500/50 hover:bg-foreground/10 transition-all text-foreground/70 group"
+                    className="flex items-center gap-2 px-4 md:px-5 py-2 md:py-2.5 rounded-xl border border-border bg-foreground/5 font-bold text-[11px] md:text-[13px] hover:border-blue-500/50 hover:bg-foreground/10 transition-all text-foreground/70 group"
                   >
                     <Briefcase size={14} className="text-blue-500 group-hover:scale-110 transition-transform md:w-[16px] md:h-[16px]" /> 
                     Apply for a Job
@@ -653,7 +653,7 @@ const Chat = () => {
                       value={inputValue}
                       onChange={(e) => setInputValue(e.target.value)}
                       placeholder="Ask me anything..."
-                      className="w-full bg-transparent border-none outline-none py-3 md:py-3.5 px-4 md:px-6 font-bold text-[16px] tracking-wide text-foreground placeholder:text-foreground/20"
+                      className="w-full bg-transparent border-none outline-none py-3 md:py-3.5 px-4 md:px-6 font-bold text-[16px] tracking-wide text-foreground placeholder:text-muted"
                       onKeyDown={(e) => e.key === 'Enter' && handleSend(inputValue)}
                     />
                   </div>
