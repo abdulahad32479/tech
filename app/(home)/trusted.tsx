@@ -32,7 +32,7 @@ const stats = [
 
 const Trusted = () => {
   return (
-    <section id="trusted" className="py-24 bg-background relative overflow-hidden">
+    <section id="trusted" className="py-24 relative overflow-hidden">
       {/* Background Grid/Stars effect could be added here */}
       
       <div className="container px-4">

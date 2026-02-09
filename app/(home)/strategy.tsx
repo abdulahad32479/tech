@@ -39,7 +39,7 @@ const Strategy = () => {
   ];
 
   return (
-    <section id="strategy" className="py-24 bg-background relative overflow-hidden">
+    <section id="strategy" className="py-24 relative overflow-hidden">
       {/* Background Decorative Glow */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
 

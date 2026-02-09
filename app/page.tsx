@@ -16,10 +16,12 @@ import Faqs from "./(home)/faqs";
 import Transform from "./(home)/transform";
 import Contact from "./(home)/contact";
 import Footer from "@/src/components/footer";
+import ParticlesBackground from "@/src/components/ui/particles-background";
 
 const Home: React.FC = () => {
   return (
-    <main className="relative">
+    <main className="relative min-h-screen text-foreground overflow-x-hidden">
+      <ParticlesBackground />
       <Navbar />
       <Hero />
       <Chat />

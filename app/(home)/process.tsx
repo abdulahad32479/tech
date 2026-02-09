@@ -35,7 +35,7 @@ const steps = [
 
 const Process = () => {
   return (
-    <section id="process" className="py-24 bg-background relative overflow-hidden">
+    <section id="process" className="py-24 relative overflow-hidden">
       <div className="container px-4">
         
         {/* Section Header */}

@@ -51,7 +51,7 @@ const Technology = () => {
   const tabs = Object.keys(techData);
 
   return (
-    <section id="technology" className="py-24 bg-background relative overflow-hidden">
+    <section id="technology" className="py-24 relative overflow-hidden">
       <div className="container px-4">
         
         {/* Section Header */}

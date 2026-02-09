@@ -44,7 +44,7 @@ const awards = [
 
 const Award = () => {
   return (
-    <section id="awards" className="py-24 bg-background relative overflow-hidden">
+    <section id="awards" className="py-24 relative overflow-hidden">
       <div className="container px-4">
         
         {/* Section Header */}

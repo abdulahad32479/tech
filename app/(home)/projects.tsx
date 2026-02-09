@@ -20,7 +20,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="portfolio" className="py-24 bg-background relative overflow-hidden text-foreground">
+    <section id="portfolio" className="py-24 relative overflow-hidden text-foreground">
       <div className="container ">
         
         {/* Centered Section Header */}

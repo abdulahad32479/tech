@@ -23,7 +23,7 @@ const reasons = [
 
 const Choose = () => {
   return (
-    <section id="choose" className="py-24 bg-background relative overflow-hidden">
+    <section id="choose" className="py-24 relative overflow-hidden">
       {/* Background Particles/Network Effect */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">

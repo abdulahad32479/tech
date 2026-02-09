@@ -45,7 +45,7 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 py-4 transition-all duration-300 ${
       hasScrolled 
-        ? "backdrop-blur-md bg-background/80 border-b border-foreground/5" 
+        ? "bg-card border-b border-foreground/5" 
         : "bg-transparent border-transparent"
     }`}>
       <div className="container flex items-center justify-between">
@@ -106,7 +106,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden overflow-hidden bg-background border-b border-foreground/10"
+            className="lg:hidden overflow-hidden bg-card border-b border-foreground/10"
           >
             <div className="container py-8 space-y-6">
               <div className="flex flex-col gap-6">

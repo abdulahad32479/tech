@@ -5,7 +5,7 @@ import { Linkedin, Mail, Twitter, Github } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-background border-t border-border pt-20 pb-10 relative overflow-hidden">
+    <footer className="bg-card border-t border-border pt-20 pb-10 relative overflow-hidden">
       
       <div className="container px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">

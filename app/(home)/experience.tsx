@@ -29,7 +29,7 @@ const options = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 bg-background relative overflow-hidden">
+    <section id="experience" className="py-24 relative overflow-hidden">
       <div className="container px-4">
         
         {/* Section Header */}
