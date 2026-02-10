@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Sun, Moon, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isLightMode, setIsLightMode] = useState(false);
@@ -22,11 +23,11 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { name: "Portfolio", id: "portfolio" },
-    { name: "About", id: "about" },
-    { name: "Services", id: "services" },
-    { name: "Careers", id: "careers" },
-    { name: "Contact", id: "contact" },
+    { name: "Portfolio", id: "portfolio", scroll: true },
+    { name: "About", id: "about", scroll: true },
+    { name: "Services", id: "services", scroll: true },
+    { name: "Careers", id: "careers", scroll: false, href: "/careers" },
+    { name: "Contact", id: "contact", scroll: true },
   ];
 
   const scrollToSection = (id: string) => {
@@ -71,12 +72,23 @@ const Navbar = () => {
         {/* Desktop Navigation Links (for >= lg) */}
         <div className="hidden lg:flex items-center gap-8 px-8 py-2.5">
           {navLinks.map((link) => (
-            <div key={link.id} className="relative group cursor-pointer" onClick={() => scrollToSection(link.id)}>
-              <h5 className="text-[12px] font-bold transition-all opacity-60 group-hover:opacity-100 group-hover:text-blue-500">
-                {link.name}
-              </h5>
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full" />
-            </div>
+            link.scroll ? (
+              <div key={link.id} className="relative group cursor-pointer" onClick={() => scrollToSection(link.id)}>
+                <h5 className="text-[12px] font-bold transition-all opacity-60 group-hover:opacity-100 group-hover:text-blue-500">
+                  {link.name}
+                </h5>
+                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full" />
+              </div>
+            ) : (
+              <Link key={link.id} href={link.href || "#"}>
+                <div className="relative group cursor-pointer">
+                  <h5 className="text-[12px] font-bold transition-all opacity-60 group-hover:opacity-100 group-hover:text-blue-500">
+                    {link.name}
+                  </h5>
+                  <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full" />
+                </div>
+              </Link>
+            )
           ))}
         </div>
 
