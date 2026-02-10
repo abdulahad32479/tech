@@ -1,132 +1,218 @@
 "use client";
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+
+/* ================= PROJECT DATA ================= */
 
 const projects = [
   {
     slug: "staron-ai",
     title: "Staron AI",
-    subtitle: "AI-Powered Website Builder with Intelligent Automation",
-    description: "An AI-powered website builder with natural language prompts, integrated developer support, and role-based dashboards for users, developers, and admins.",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
-    tags: ["Python", "AI/ML", "React", "Next.js"],
-    overview: "Staron AI revolutionizes website creation by combining artificial intelligence with intuitive design tools. Users can describe their vision in natural language, and our AI transforms those ideas into fully functional, beautiful websites. The platform features role-based dashboards for seamless collaboration between users, developers, and administrators.",
-    challenge: "Traditional website builders require technical expertise and significant time investment. Non-technical users struggle with complex interfaces, while developers waste time on repetitive tasks. There was a clear need for a solution that bridges this gap using AI technology.",
-    solution: "A modular OSINT-powered system was developed to automate wallet tracing, identity tracking, voice analysis, and legal document generation through integrated AI and multi-API workflows.",
-    results: "Users gain clear insights, stronger evidence, and faster pathways to reporting, recovering, and preventing online scams.",
-    technologies: ["Python", "TensorFlow", "React", "Next.js", "PostgreSQL", "OpenAI API"],
-    liveUrl: "https://staron.ai/",
-    gallery: [
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1200&auto=format&fit=crop"
-    ]
+    description:
+      "AI-powered website builder using natural language prompts with role-based dashboards.",
+    image:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800",
+    tags: ["AI", "Next.js", "Python"]
   },
   {
     slug: "scam-recovery",
     title: "Scam Recovery",
-    subtitle: "AI-Powered Scam Tracing Made Simple and Effective",
-    description: "An AI-driven OSINT platform that helps users investigate online scams, trace digital footprints, and generate actionable evidence for recovery and legal action.",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop",
-    tags: ["Python/Django", "AI", "OSINT"],
-    overview: "An AI-driven OSINT platform that helps users investigate online scams, trace digital footprints, and generate actionable evidence for recovery and legal action. Trace Direct is an AI-powered web application designed to help users investigate and report online scams involving payments, cryptocurrency, or impersonation. The system leverages a multi-API OSINT (Open-Source Intelligence) engine to gather, analyze, and present evidence in user-friendly formats, empowering individuals and professionals to trace scams efficiently, recover evidence, and take informed legal or preventive actions.",
-    challenge: "Online scams are increasingly sophisticated, leaving victims with limited tools to trace perpetrators or recover losses. Traditional investigation methods are expensive, time-consuming, and require technical expertise that most victims don't possess.",
-    solution: "We developed Trace Direct, a comprehensive OSINT platform that automates the investigation process. The system includes: Initial Case Submission for collecting scam details and evidence, Wallet Tracing using blockchain APIs (Achain, Shodan), Voice Scam Detection with AI-powered analysis, Identity Tracking through IP and device fingerprinting, and Demand Letter Generation using AI to create legal documents.",
-    results: "The platform has helped hundreds of scam victims gather actionable evidence, with a 75% success rate in identifying scammer locations and digital footprints. Users report 90% faster investigation times compared to traditional methods, and the automated legal document generation has streamlined the recovery process significantly.",
-    technologies: ["Python", "Django", "OpenAI", "Achain API", "Shodan", "Moralist API", "PostgreSQL"],
-    liveUrl: "https://tracedirect.com/",
-    gallery: [
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop"
-    ]
+    description:
+      "AI-driven OSINT platform for tracing scams and generating legal evidence.",
+    image:
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800",
+    tags: ["OSINT", "AI", "Django"]
+  },
+  {
+    slug: "fintech-dashboard",
+    title: "FinTech Dashboard",
+    description:
+      "Real-time financial analytics dashboard with secure data pipelines.",
+    image:
+      "https://images.unsplash.com/photo-1559526324-593bc073d938?q=80&w=800",
+    tags: ["FinTech", "Next.js"]
+  },
+  {
+    slug: "health-ai",
+    title: "Health AI",
+    description:
+      "AI-powered diagnostics and patient monitoring platform.",
+    image:
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=800",
+    tags: ["Healthcare", "AI"]
+  },
+  {
+    slug: "ecommerce-pro",
+    title: "E-Commerce Pro",
+    description:
+      "Scalable ecommerce system with payments, inventory & analytics.",
+    image:
+      "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=800",
+    tags: ["Ecommerce", "Stripe"]
+  },
+  {
+    slug: "edtech-platform",
+    title: "EdTech Platform",
+    description:
+      "Online learning platform with LMS and AI-powered assessments.",
+    image:
+      "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800",
+    tags: ["EdTech", "LMS"]
+  },
+  {
+    slug: "crm-system",
+    title: "CRM System",
+    description:
+      "Custom CRM for sales automation and customer engagement.",
+    image:
+      "https://images.unsplash.com/photo-1556155092-8707de31f9c4?q=80&w=800",
+    tags: ["CRM", "SaaS"]
+  },
+  {
+    slug: "logistics-ai",
+    title: "Logistics AI",
+    description:
+      "AI-based logistics tracking and route optimization platform.",
+    image:
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800",
+    tags: ["Logistics", "AI"]
+  },
+  {
+    slug: "portfolio-builder",
+    title: "Portfolio Builder",
+    description:
+      "No-code portfolio builder for creators and developers.",
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800",
+    tags: ["No-Code", "Web"]
+  },
+  {
+    slug: "saas-analytics",
+    title: "SaaS Analytics",
+    description:
+      "Advanced analytics platform for SaaS founders.",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800",
+    tags: ["SaaS", "Analytics"]
   }
 ];
 
+/* ================= COMPONENT ================= */
+
 const Projects = () => {
+  const [visibleCount, setVisibleCount] = useState(2);
+
+  const visibleProjects = projects.slice(0, visibleCount);
+
+  const handleViewMore = () => {
+    setVisibleCount((prev) => Math.min(prev + 2, projects.length));
+  };
+
   return (
-    <section id="portfolio" className="py-24 relative overflow-hidden text-foreground">
-      <div className="container ">
-        
-        {/* Centered Section Header */}
-        <div className="text-center  mx-auto mb-16 space-y-4">
-          <motion.h2 
+    <section id="portfolio" className="py-24 text-foreground">
+      <div className="container">
+
+        {/* HEADER */}
+        <div className="text-center mb-16 space-y-4">
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold"
           >
             Our Projects
           </motion.h2>
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             className="text-lg text-muted font-medium"
           >
-            Explore our portfolio of innovative solutions across AI, web, mobile, and <br className="hidden md:block" /> enterprise software
+            Explore our portfolio of innovative digital solutions
           </motion.p>
         </div>
 
-        {/* Projects Grid */}
+        {/* PROJECT GRID */}
         <div className="flex flex-wrap justify-between gap-y-8">
-          {projects.map((project, idx) => (
+          {visibleProjects.map((project, idx) => (
             <motion.div
-              key={idx}
+              key={project.slug}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="group rounded-[20px] bg-card border border-border overflow-hidden flex flex-col hover:border-blue-500/40 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-600/5 w-full md:w-[48%]"
+              transition={{ delay: idx * 0.08 }}
+              className="w-full md:w-[48%] rounded-[20px] bg-card border border-border 
+              overflow-hidden hover:shadow-xl transition group"
             >
-              {/* Image Container */}
-              <div className="relative aspect-[16/7] overflow-hidden border-b border-border">
-                <img 
-                  src={project.image} 
+              {/* IMAGE */}
+              <div className="aspect-[16/7] overflow-hidden border-b border-border">
+                <img
+                  src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
+                  className="w-full h-full object-cover 
+                  grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition"
                 />
               </div>
 
-              {/* Content */}
-              <div className="p-8 space-y-6 flex-1 flex flex-col justify-between bg-card/40">
-                <div className="space-y-4">
-                  <h3 className="text-2xl font-black text-foreground">
-                    {project.title}
-                  </h3>
-                  <p className="text-[15px] font-bold text-muted leading-relaxed">
-                    {project.description}
-                  </p>
-                  
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {project.tags.map((tag, tIdx) => (
-                      <span 
-                        key={tIdx} 
-                        className="px-4 py-1.5 rounded-lg bg-blue-600/10 text-blue-500 font-black text-xs border border-blue-500/20"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+              {/* CONTENT */}
+              <div className="p-8 space-y-5">
+                <h3 className="text-2xl font-black">
+                  {project.title}
+                </h3>
+
+                <p className="text-sm font-semibold text-muted">
+                  {project.description}
+                </p>
+
+                {/* TAGS */}
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 rounded-lg text-xs font-bold
+                      bg-sky-100 text-sky-600"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
 
-                {/* Foot Button */}
-                <Link href={`/projects/${project.slug}`} className="w-full">
-                  <button className="w-full py-3.5 rounded-xl border border-white/5 bg-foreground/5 hover:bg-foreground/10 transition-all active:scale-[0.98] text-sm font-bold flex items-center justify-center gap-3 mt-4 group/btn">
+                {/* BUTTON */}
+                <Link href={`/projects/${project.slug}`}>
+                  <button
+                    className="mt-4 w-full py-3 rounded-xl 
+                    bg-sky-500 text-white font-bold
+                    hover:bg-sky-600 transition 
+                    flex items-center justify-center gap-2"
+                  >
                     View Full Details
-                    <ArrowRight size={16} className="transition-transform group-hover/btn:translate-x-1" />
+                    <ArrowRight size={16} />
                   </button>
                 </Link>
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* VIEW MORE BUTTON */}
+        {visibleCount < projects.length && (
+          <div className="flex justify-center mt-16">
+            <button
+              onClick={handleViewMore}
+              className="px-12 py-4 rounded-full 
+              bg-gradient-to-r from-sky-500 to-teal-400
+              text-white font-bold text-lg
+              hover:opacity-90 transition shadow-lg"
+            >
+              View More Projects
+            </button>
+          </div>
+        )}
 
       </div>
     </section>
