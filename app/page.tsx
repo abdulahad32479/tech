@@ -23,20 +23,51 @@ const Home: React.FC = () => {
     <main className="relative min-h-screen text-foreground overflow-x-hidden">
       <ParticlesBackground />
       <Navbar />
-      <Hero />
-      <Chat />
-      <Solutions />
-      <Technology />
-      <Strategy />
-      <Experience />
-      <Projects />
-      <Process />
-      <Trusted />
-      <Award />
-      <Choose />
-      <Faqs />
-      <Transform />
-      <Contact />
+
+      {/* Hero / Top */}
+      <section id="home">
+        <Hero />
+      </section>
+
+      <section>
+        <Chat />
+      </section>
+      {/* About */}
+      <section id="about">
+        <Experience />
+        <Process />
+        <Choose />
+      </section>
+
+      {/* Services */}
+      <section id="services">
+        <Solutions />
+        <Technology />
+        <Strategy />
+      </section>
+
+      {/* Portfolio */}
+      <section id="portfolio">
+        <Projects />
+        <Trusted />
+        <Award />
+      </section>
+
+      {/* FAQs */}
+      <section>
+        <Faqs />
+      </section>
+
+      {/* CTA */}
+      <section>
+        <Transform />
+      </section>
+
+      {/* Contact (LAST section) */}
+      <section id="contact">
+        <Contact />
+      </section>
+
       <Footer />
     </main>
   );

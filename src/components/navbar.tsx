@@ -23,9 +23,10 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { name: "Portfolio", id: "portfolio", scroll: true },
+    
     { name: "About", id: "about", scroll: true },
     { name: "Services", id: "services", scroll: true },
+    { name: "Portfolio", id: "portfolio", scroll: true },
     { name: "Careers", id: "careers", scroll: false, href: "/careers" },
     { name: "Contact", id: "contact", scroll: true },
   ];
