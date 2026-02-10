@@ -127,7 +127,7 @@ const Solutions = () => {
 
               <div className="space-y-3 mb-10">
                 {item.features.map((feature, fIdx) => (
-                  <div key={fIdx} className="flex items-center gap-3 text-sm font-bold text-muted group-hover:text-foreground/60 transition-colors">
+                  <div key={fIdx} className="flex items-center gap-3 text-sm font-bold text-white/70 group-hover:text-foreground/60 transition-colors">
                     <div className={`w-1.5 h-1.5 rounded-full bg-current ${item.textColor}`} />
                     {feature}
                   </div>

@@ -47,7 +47,7 @@ const Experience = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-muted font-medium"
+            className="text-lg text-white/80 font-medium"
           >
             Choose your preferred way to interact with FabTechSol expertise
           </motion.p>
@@ -69,14 +69,14 @@ const Experience = () => {
               </div>
               <div className="space-y-2">
                 <h4 className="text-2xl font-black text-foreground">{opt.title}</h4>
-                <p className="text-sm font-bold text-muted">{opt.description}</p>
+                <p className="text-sm font-bold text-white/70">{opt.description}</p>
               </div>
               <button className="w-full py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-black text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-lg shadow-blue-600/20 active:scale-95">
                 {opt.btnText}
                 <ArrowRight size={16} />
               </button>
               <div className="w-full h-[1px] bg-border/50" />
-              <div className="text-[10px] font-black uppercase tracking-widest text-muted/60">
+              <div className="text-[10px] font-black uppercase tracking-widest text-white/60">
                 {opt.footer}
               </div>
             </motion.div>

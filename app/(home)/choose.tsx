@@ -78,7 +78,7 @@ const Choose = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg md:text-xl text-muted/60 font-medium max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-white/60 font-medium max-w-2xl mx-auto"
           >
             We don't just write code – we build solutions that drive measurable business results
           </motion.p>
@@ -104,7 +104,7 @@ const Choose = () => {
                 <h3 className="text-xl font-bold text-foreground group-hover:text-blue-500 transition-colors">
                   {reason.title}
                 </h3>
-                <p className="text-[14px] font-medium text-muted/50 leading-relaxed md:px-2">
+                <p className="text-[14px] font-medium text-white/50 leading-relaxed md:px-2">
                   {reason.description}
                 </p>
               </div>

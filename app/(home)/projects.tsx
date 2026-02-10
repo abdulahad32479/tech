@@ -131,7 +131,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-muted font-medium"
+            className="text-lg text-white/80 font-medium"
           >
             Explore our portfolio of innovative digital solutions
           </motion.p>
@@ -165,7 +165,7 @@ const Projects = () => {
                   {project.title}
                 </h3>
 
-                <p className="text-sm font-semibold text-muted">
+                <p className="text-sm font-semibold text-white/70">
                   {project.description}
                 </p>
 

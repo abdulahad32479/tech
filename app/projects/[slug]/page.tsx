@@ -84,7 +84,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             <motion.button
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex items-center gap-2 text-muted hover:text-blue-500 transition-colors mb-8 group"
+              className="flex items-center gap-2 text-white/70 hover:text-blue-500 transition-colors mb-8 group"
             >
               <ArrowLeft size={20} className="transition-transform group-hover:-translate-x-1" />
               <span className="font-bold text-sm">Back to Projects</span>
@@ -114,7 +114,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
               <p className="text-xl text-blue-400 font-semibold">
                 {project.subtitle}
               </p>
-              <p className="text-lg text-muted leading-relaxed">
+              <p className="text-lg text-white/80 leading-relaxed">
                 {project.description}
               </p>
               
@@ -156,7 +156,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Project Overview</h2>
-            <p className="text-lg text-muted leading-relaxed">
+            <p className="text-lg text-white/80 leading-relaxed">
               {project.overview}
             </p>
           </motion.div>
@@ -179,7 +179,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold">Challenge</h2>
               </div>
-              <p className="text-lg text-muted leading-relaxed">
+              <p className="text-lg text-white/80 leading-relaxed">
                 {project.challenge}
               </p>
             </motion.div>
@@ -203,7 +203,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold">Solution</h2>
               </div>
-              <p className="text-lg text-muted leading-relaxed">
+              <p className="text-lg text-white/80 leading-relaxed">
                 {project.solution}
               </p>
             </motion.div>
@@ -227,7 +227,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold">Results</h2>
               </div>
-              <p className="text-lg text-muted leading-relaxed">
+              <p className="text-lg text-white/80 leading-relaxed">
                 {project.results}
               </p>
             </motion.div>
@@ -246,7 +246,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           >
             <div className="text-center max-w-2xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Project Gallery</h2>
-              <p className="text-muted">
+              <p className="text-white/80">
                 Explore the visual journey of this project through key screenshots and design highlights
               </p>
             </div>
@@ -288,7 +288,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             <h2 className="text-4xl md:text-5xl font-bold">
               Impressed by What You See?
             </h2>
-            <p className="text-lg text-muted max-w-2xl mx-auto">
+              <p className="text-lg text-white/80 max-w-2xl mx-auto">
               Let's build something amazing together. Our team is ready to bring your vision to life with the same excellence and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -302,7 +302,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 </button>
               </Link>
             </div>
-            <div className="flex flex-wrap justify-center gap-8 pt-4 text-sm text-muted/60">
+            <div className="flex flex-wrap justify-center gap-8 pt-4 text-sm text-white/60">
               <div className="flex items-center gap-2">
                 <span className="text-blue-500">✓</span>
                 Free Consultation

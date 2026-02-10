@@ -2,17 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 🌙 Default Theme (Gradient Card) */
+/* 🌙 Default Theme (Solid Dark) */
 :root {
-  --background: #3D45AA;
+  --background: #0F1117;
   --foreground: #ffffff;
 
-  /* Gradient card */
-  --card: linear-gradient(to right, #2563eb, #06b6d4);
+  /* Solid dark card */
+  --card: #1A1F3A;
   --card-foreground: #ffffff;
 
   --border: rgba(255, 255, 255, 0.15);
-  --muted: rgba(255, 255, 255, 0.5);
+  --muted: #ffffff;
 }
 
 /* ☀️ Light Mode (Solid Card) */

@@ -62,7 +62,7 @@ const Award = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-muted font-medium"
+            className="text-lg text-white/80 font-medium"
           >
             Recognized for excellence in software development and client service
           </motion.p>
@@ -89,7 +89,7 @@ const Award = () => {
                 <div className="text-lg font-bold text-foreground">
                   {award.label}
                 </div>
-                <p className="text-xs font-bold text-muted/60 leading-relaxed max-w-[200px]">
+                <p className="text-xs font-bold text-white/60 leading-relaxed max-w-[200px]">
                   {award.description}
                 </p>
               </div>

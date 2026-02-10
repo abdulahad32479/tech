@@ -25,7 +25,7 @@ const AboutSection: React.FC = () => {
           </h2>
 
           {/* Description */}
-          <p className="mb-10 max-w-xl text-muted font-medium text-sm sm:text-base leading-relaxed">
+          <p className="mb-10 max-w-xl text-white/80 font-medium text-sm sm:text-base leading-relaxed">
             At Denvora Tech, we believe that great software is built at the intersection
             of design and engineering. We're a distributed team of specialists dedicated
             to building the future of the web.
@@ -35,11 +35,11 @@ const AboutSection: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-12 mb-8">
             <div>
               <p className="text-blue-500 font-bold text-2xl sm:text-3xl">50+</p>
-              <p className="text-muted/70 text-xs sm:text-sm">Projects Delivered</p>
+              <p className="text-white/70 text-xs sm:text-sm">Projects Delivered</p>
             </div>
             <div>
               <p className="text-blue-500 font-bold text-2xl sm:text-3xl">10+</p>
-              <p className="text-muted/70 text-xs sm:text-sm">Years Experience</p>
+              <p className="text-white/70 text-xs sm:text-sm">Years Experience</p>
             </div>
           </div>
 

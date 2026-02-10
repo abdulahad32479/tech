@@ -29,7 +29,7 @@ const Transform = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-muted/60"
+            className="text-lg text-white/80"
           >
             Join 350+ successful projects. Start with AI chat or contact our team directly.
           </motion.p>
@@ -54,7 +54,7 @@ const Transform = () => {
               </div>
               
               <h3 className="text-2xl font-bold text-foreground mb-3">Start Instant AI Chat</h3>
-              <p className="text-muted/60 mb-8 leading-relaxed">
+              <p className="text-white/60 mb-8 leading-relaxed">
                 Get answers to your questions immediately, explore our portfolio, and discuss your project needs with our AI assistant.
               </p>
               
@@ -78,7 +78,7 @@ const Transform = () => {
               </div>
               
               <h3 className="text-2xl font-bold text-foreground mb-3">Talk to Human Expert</h3>
-              <p className="text-muted/60 mb-8 leading-relaxed">
+              <p className="text-white/80 mb-8 leading-relaxed">
                 Prefer human interaction? Fill out the form below and we'll respond within 24 hours with a detailed proposal.
               </p>
               

@@ -63,7 +63,7 @@ const Strategy = () => {
                 Download Your Free <br />
                 <span className=" text-[#F5F6FF]">Digital Transformation Playbook</span>
               </h2>
-              <p className="text-lg text-muted font-medium max-w-xl leading-relaxed">
+              <p className="text-lg text-white/80 font-medium max-w-xl leading-relaxed">
                 Get the exact framework we use to help businesses achieve 10x ROI on their software investments. Learn from 350+ successful projects.
               </p>
             </div>
@@ -107,12 +107,12 @@ const Strategy = () => {
 
                 <div className="space-y-2">
                   <h3 className="text-3xl font-black text-foreground">Get Instant Access</h3>
-                  <p className="text-sm text-muted font-bold">Enter your details below</p>
+                  <p className="text-sm text-white/70 font-bold">Enter your details below</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="w-full space-y-5">
                   <div className="text-left space-y-2">
-                    <label className="text-xs font-black uppercase tracking-widest text-muted pl-1">Full Name</label>
+                    <label className="text-xs font-black uppercase tracking-widest text-white/70 pl-1">Full Name</label>
                     <input 
                       required
                       type="text" 
@@ -122,7 +122,7 @@ const Strategy = () => {
                   </div>
 
                   <div className="text-left space-y-2">
-                    <label className="text-xs font-black uppercase tracking-widest text-muted pl-1">Business Email</label>
+                    <label className="text-xs font-black uppercase tracking-widest text-white/70 pl-1">Business Email</label>
                     <input 
                       required
                       type="email" 
@@ -140,7 +140,7 @@ const Strategy = () => {
                       />
                       <CheckCircle2 className="absolute h-3.5 w-3.5 text-white opacity-0 peer-checked:opacity-100 left-0.5 pointer-events-none" />
                     </div>
-                    <label className="text-[11px] font-bold text-muted leading-tight cursor-pointer">
+                    <label className="text-[11px] font-bold text-white/70 leading-tight cursor-pointer">
                       I agree to receive emails with the strategy guide and occasional updates about software development insights. Unsubscribe anytime.
                     </label>
                   </div>
@@ -169,7 +169,7 @@ const Strategy = () => {
                   </button>
                 </form>
 
-                <div className="flex items-center  text-[10px]  text-muted">
+                <div className="flex items-center  text-[10px]  text-white/70">
                   <span>100% free</span>
                   <div className="w-1 h-1 rounded-full bg-muted/40" />
                   <span>No credit card required</span>

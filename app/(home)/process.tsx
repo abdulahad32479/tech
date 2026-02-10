@@ -53,7 +53,7 @@ const Process = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-muted font-medium"
+            className="text-lg text-white/80 font-medium"
           >
             A simple, transparent approach to bringing your project to life
           </motion.p>
@@ -85,7 +85,7 @@ const Process = () => {
                 <h4 className="text-2xl font-black text-foreground">
                   {step.title}
                 </h4>
-                <p className="text-[15px] font-bold text-muted leading-relaxed">
+                <p className="text-[15px] font-bold text-white/80 leading-relaxed">
                   {step.description}
                 </p>
               </div>

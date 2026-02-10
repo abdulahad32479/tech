@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { Sun, Moon, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import logo from "@/public/assets/logo.png";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isLightMode, setIsLightMode] = useState(false);
@@ -63,18 +65,21 @@ const scrollToSection = (id: string) => {
   }, [isMenuOpen]);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 py-4 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 w-full z-50  transition-all duration-300 ${
       hasScrolled 
-        ? "bg-white/30 backdrop-blur-2xl border-b border-white/10" 
+        ? "bg-white/5 backdrop-blur-2xl border-b border-white/10" 
         : "bg-transparent border-transparent"
     }`}>
       <div className="container flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center">
-          <h1 className="text-2xl font-black text-blue-500 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-            FabTechSol
-          </h1>
-        </div>
+        <Link href="/">
+          <Image 
+            src={logo} 
+            alt="FabTechSol Logo" 
+            className="w-28 h-auto cursor-pointer"
+            priority
+          />
+        </Link>
 
         {/* Desktop Navigation Links (for >= lg) */}
         <div className="hidden lg:flex items-center gap-8 px-8 py-2.5">

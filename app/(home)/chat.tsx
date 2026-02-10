@@ -57,7 +57,7 @@ const ConsultationCard = () => {
         </div>
         <div className="space-y-2">
           <h4 className="text-2xl font-black text-foreground">Session Booked!</h4>
-          <p className="text-[16px] font-bold text-muted px-4">
+          <p className="text-[16px] font-bold text-white/80 px-4">
             Thank you for booking! Our team will join you on <span className="text-blue-500 font-black">{selectedDate}</span> at <span className="text-blue-500 font-black">{selectedTime}</span>.
           </p>
         </div>
@@ -100,7 +100,7 @@ const ConsultationCard = () => {
                   className={`flex items-center gap-1 md:gap-2 px-2 md:px-4 py-2 md:py-3 rounded-lg md:rounded-xl border transition-all text-[11px] md:text-[14px] font-bold ${
                     selectedDate === date 
                       ? 'bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-600/20' 
-                      : 'bg-foreground/[0.03] border-border text-muted hover:border-foreground/20'
+                      : 'bg-foreground/[0.03] border-border text-white/70 hover:border-foreground/20'
                   }`}
                 >
                   <Calendar size={12} className={`${selectedDate === date ? 'text-white' : 'opacity-50'} hidden sm:block`} />
@@ -135,7 +135,7 @@ const ConsultationCard = () => {
                     className={`flex flex-col md:flex-row items-center justify-center gap-1 px-2 md:px-3 py-2 md:py-3 rounded-lg md:rounded-xl border transition-all text-[10px] md:text-[12px] font-bold ${
                       selectedTime === time 
                         ? 'bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-600/20' 
-                        : 'bg-foreground/[0.03] border-border text-muted hover:border-foreground/20'
+                        : 'bg-foreground/[0.03] border-border text-white/70 hover:border-foreground/20'
                     }`}
                   >
                     <Clock size={12} className={`${selectedTime === time ? 'text-white' : 'opacity-50'} hidden md:block`} />
@@ -146,9 +146,9 @@ const ConsultationCard = () => {
             </div>
 
             <div>
-              <p className="text-sm md:text-[16px] font-bold text-muted mb-3 md:mb-4">Your timezone:</p>
+              <p className="text-sm md:text-[16px] font-bold text-white/70 mb-3 md:mb-4">Your timezone:</p>
               <div className="relative group">
-                <Globe className="absolute left-4 top-1/2 -translate-y-1/2 text-muted" size={18} />
+                <Globe className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70" size={18} />
                 <select 
                   value={timezone}
                   onChange={(e) => setTimezone(e.target.value)}
@@ -181,7 +181,7 @@ const ConsultationCard = () => {
              {selectedTime ? ` (${timezone})` : ""}
            </span>
         </div>
-        <p className="text-[11px] font-bold text-muted text-center">30-minute free consultation with our team</p>
+        <p className="text-[11px] font-bold text-white/70 text-center">30-minute free consultation with our team</p>
       </div>
     </div>
   );
@@ -209,7 +209,7 @@ const ApplyCard = () => {
         </div>
         <div className="space-y-2">
           <h4 className="text-2xl font-black text-foreground">Application Sent!</h4>
-          <p className="text-[16px] font-bold text-muted px-4">
+          <p className="text-[16px] font-bold text-white/80 px-4">
             Thank you for applying. Our hiring team will review your profile and get back to you shortly.
           </p>
         </div>
@@ -242,10 +242,10 @@ const ApplyCard = () => {
           
           return (
             <div key={sNum} className="flex flex-col items-center gap-3">
-              <div className={`w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center text-[10px] md:text-xs font-black transition-all ${isActive || isCompleted ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/40' : 'bg-card border border-border text-muted'}`}>
+              <div className={`w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center text-[10px] md:text-xs font-black transition-all ${isActive || isCompleted ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/40' : 'bg-card border border-border text-white/70'}`}>
                 {isCompleted ? <Check size={14} /> : sNum}
               </div>
-              <span className={`text-[9px] md:text-[10px] font-bold uppercase tracking-widest ${isActive ? 'text-foreground underline underline-offset-4 decoration-blue-500/50' : isCompleted ? 'text-foreground/60' : 'text-muted'}`}>
+              <span className={`text-[9px] md:text-[10px] font-bold uppercase tracking-widest ${isActive ? 'text-foreground underline underline-offset-4 decoration-blue-500/50' : isCompleted ? 'text-foreground/60' : 'text-white/70'}`}>
                 {s.name}
               </span>
             </div>
@@ -258,8 +258,8 @@ const ApplyCard = () => {
         {step === 1 && (
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="space-y-4 mb-8">
             <div className="relative group">
-              <User className="absolute left-4 top-1/2 -translate-y-1/2 text-muted group-focus-within:text-blue-500 transition-all" size={18} />
-              <input type="text" placeholder="Full name *" className="w-full pl-10 md:pl-12 pr-4 py-3 md:py-4 rounded-lg md:rounded-xl bg-transparent border border-border outline-none focus:border-blue-500/30 transition-all text-sm md:text-[16px] font-bold text-foreground placeholder:text-muted" />
+              <User className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 group-focus-within:text-blue-500 transition-all" size={18} />
+              <input type="text" placeholder="Full name *" className="w-full pl-10 md:pl-12 pr-4 py-3 md:py-4 rounded-lg md:rounded-xl bg-transparent border border-border outline-none focus:border-blue-500/30 transition-all text-sm md:text-[16px] font-bold text-foreground placeholder:text-white/60" />
             </div>
             <div className="relative group">
               <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-foreground opacity-40 group-focus-within:opacity-100 transition-all" size={18} />
@@ -309,8 +309,8 @@ const ApplyCard = () => {
         {step === 3 && (
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="space-y-4 mb-8">
             <div className="relative group">
-              <Linkedin className="absolute left-4 top-1/2 -translate-y-1/2 text-muted group-focus-within:text-blue-500 transition-all" size={18} />
-              <input type="text" placeholder="LinkedIn profile URL" className="w-full pl-12 pr-4 py-4 rounded-xl bg-transparent border border-border outline-none focus:border-blue-500/30 transition-all text-sm font-bold text-foreground placeholder:text-muted" />
+              <Linkedin className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 group-focus-within:text-blue-500 transition-all" size={18} />
+              <input type="text" placeholder="LinkedIn profile URL" className="w-full pl-12 pr-4 py-4 rounded-xl bg-transparent border border-border outline-none focus:border-blue-500/30 transition-all text-sm font-bold text-foreground placeholder:text-white/60" />
             </div>
             <div className="relative group">
               <Globe className="absolute left-4 top-1/2 -translate-y-1/2 text-white opacity-40 group-focus-within:opacity-100 transition-all" size={18} />
@@ -344,7 +344,7 @@ const ApplyCard = () => {
             onClick={() => setStep(step - 1)}
             className="flex-1 py-4 rounded-xl bg-card border border-border text-foreground font-black text-md flex items-center justify-center gap-3 hover:bg-foreground/10 transition-all"
           >
-            <ChevronDown className="rotate-90 text-muted" size={16} />
+            <ChevronDown className="rotate-90 text-white/70" size={16} />
             Back
           </button>
         )}
@@ -653,7 +653,7 @@ const Chat = () => {
                       value={inputValue}
                       onChange={(e) => setInputValue(e.target.value)}
                       placeholder="Ask me anything..."
-                      className="w-full bg-transparent border-none outline-none py-3 md:py-3.5 px-4 md:px-6 font-bold text-[16px] tracking-wide text-foreground placeholder:text-muted"
+                      className="w-full bg-transparent border-none outline-none py-3 md:py-3.5 px-4 md:px-6 font-bold text-[16px] tracking-wide text-foreground placeholder:text-white/60"
                       onKeyDown={(e) => e.key === 'Enter' && handleSend(inputValue)}
                     />
                   </div>

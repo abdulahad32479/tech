@@ -66,7 +66,7 @@ const Faqs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-muted/60"
+            className="text-white/60"
           >
             Everything you need to know about working with FabTechSol
           </motion.p>
@@ -111,7 +111,7 @@ const Faqs = () => {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
-                    <div className="px-6 pb-6 text-muted/70 leading-relaxed">
+                    <div className="px-6 pb-6 text-white/70 leading-relaxed">
                       {faq.answer}
                     </div>
                   </motion.div>
