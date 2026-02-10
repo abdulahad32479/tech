@@ -81,7 +81,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="flex flex-col sm:flex-row items-center gap-4"
         >
-          <button className="w-full sm:w-auto px-8 py-4 rounded-xl bg-blue-600 text-white font-bold flex items-center justify-center gap-2 hover:bg-blue-700 transition-all shadow-xl shadow-blue-600/20 group">
+          <button className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-xl shadow-blue-600/20 group">
             Start Your Project
             <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
           </button>

@@ -79,7 +79,7 @@ const Footer = () => {
                   className="w-full pl-11 pr-4 py-3 rounded-lg bg-background border border-border focus:border-blue-500 outline-none text-foreground placeholder:text-muted/40 transition-colors"
                 />
               </div>
-              <button className="px-6 py-3 rounded-lg bg-blue-600 text-white font-bold hover:bg-blue-700 transition-colors">
+              <button className="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold hover:opacity-90 transition-colors shadow-lg shadow-blue-600/40">
                 Subscribe
               </button>
             </form>

@@ -65,7 +65,7 @@ const scrollToSection = (id: string) => {
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 py-4 transition-all duration-300 ${
       hasScrolled 
-        ? "bg-card border-b border-foreground/5" 
+        ? "bg-white/30 backdrop-blur-2xl border-b border-white/10" 
         : "bg-transparent border-transparent"
     }`}>
       <div className="container flex items-center justify-between">
@@ -115,7 +115,7 @@ const scrollToSection = (id: string) => {
             <button className="px-5 py-2.5 rounded-[5px] border border-border font-bold text-[13px] hover:bg-foreground hover:text-background transition-all">
               Book Consultation
             </button>
-            <button className="px-5 py-2.5 border border-blue-500 rounded-[5px] bg-blue-600 font-bold text-[13px] text-white hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/40">
+            <button className="px-5 py-2.5 border border-blue-500 rounded-[5px] bg-gradient-to-r from-blue-600 to-cyan-500 font-bold text-[13px] text-white hover:opacity-90 transition-all shadow-lg shadow-blue-600/40">
               Get Started
             </button>
           </div>
@@ -155,7 +155,7 @@ const scrollToSection = (id: string) => {
                 <button className="w-full py-3 md:py-4 rounded-lg md:rounded-xl border border-foreground/10 font-bold text-sm uppercase tracking-widest bg-foreground/5 hover:bg-foreground/10 transition-all">
                   Book Consultation
                 </button>
-                <button className="w-full py-3 md:py-4 rounded-lg md:rounded-xl bg-blue-600 text-white font-bold text-sm uppercase tracking-widest shadow-lg shadow-blue-600/40 hover:bg-blue-700 transition-all">
+                <button className="w-full py-3 md:py-4 rounded-lg md:rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-sm uppercase tracking-widest shadow-lg shadow-blue-600/40 hover:opacity-90 transition-all">
                   Get Started
                 </button>
               </div>

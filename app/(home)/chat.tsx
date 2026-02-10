@@ -164,7 +164,7 @@ const ConsultationCard = () => {
 
             <button 
               onClick={() => setIsSubmitted(true)}
-              className="w-full py-3 md:py-4 rounded-lg md:rounded-xl bg-blue-600 text-white font-black text-base md:text-lg shadow-xl shadow-blue-600/30 hover:bg-blue-700 transition-all active:scale-95"
+              className="w-full py-3 md:py-4 rounded-lg md:rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-black text-base md:text-lg shadow-xl shadow-blue-600/30 hover:opacity-90 transition-all active:scale-95"
             >
               Continue
             </button>
@@ -350,7 +350,7 @@ const ApplyCard = () => {
         )}
         <button 
           onClick={() => step < 3 ? setStep(step + 1) : setIsSubmitted(true)}
-          className="flex-[2] py-4 rounded-xl bg-blue-600 text-white font-black text-md flex items-center justify-center gap-4 hover:bg-blue-700 transition-all shadow-xl shadow-blue-600/20 active:scale-95 group"
+          className="flex-[2] py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-black text-md flex items-center justify-center gap-4 hover:opacity-90 transition-all shadow-xl shadow-blue-600/20 active:scale-95 group"
         >
           {step === 3 ? (
             <>
@@ -516,7 +516,7 @@ const Chat = () => {
                 </div>
                 <button 
                   onClick={() => handleSend(inputValue)}
-                  className="w-full py-4 rounded-xl bg-blue-600 text-white font-black text-lg flex items-center justify-center gap-2 hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/40"
+                  className="w-full py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-black text-lg flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-lg shadow-blue-600/40"
                 >
                   Ask AI Now
                   <ArrowRight size={20} />
@@ -531,7 +531,7 @@ const Chat = () => {
                     <button 
                       key={q}
                       onClick={() => handleSend(q)}
-                      className="px-6 py-3 rounded-2xl bg-card border border-border text-sm font-bold text-foreground/80 hover:bg-blue-600 hover:text-white hover:border-blue-500 transition-all"
+                      className="px-6 py-3 rounded-2xl bg-card border border-border text-sm font-bold text-foreground/80 hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-500 hover:text-white hover:border-cyan-500 transition-all"
                     >
                       {q}
                     </button>
@@ -661,7 +661,7 @@ const Chat = () => {
                   {/* Separate Send Button */}
                   <button 
                     onClick={() => handleSend(inputValue)}
-                    className="h-[50px] md:h-[60px] px-5 md:px-8 rounded-xl bg-blue-600 text-white hover:bg-blue-700 transition-all active:scale-95 shadow-xl shadow-blue-600/30 flex items-center gap-2 md:gap-3 font-black text-sm md:text-lg group shrink-0"
+                    className="h-[50px] md:h-[60px] px-5 md:px-8 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white hover:opacity-90 transition-all active:scale-95 shadow-xl shadow-blue-600/30 flex items-center gap-2 md:gap-3 font-black text-sm md:text-lg group shrink-0"
                   >
                     <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform md:w-[22px] md:h-[22px]" />
                     <span className="hidden sm:inline">Send</span>

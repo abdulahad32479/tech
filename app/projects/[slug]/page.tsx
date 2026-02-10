@@ -292,7 +292,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
               Let's build something amazing together. Our team is ready to bring your vision to life with the same excellence and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="px-8 py-4 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/40 flex items-center gap-2">
+              <button className="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold hover:opacity-90 transition-all shadow-lg shadow-blue-600/40 flex items-center gap-2">
                 <Calendar size={20} />
                 Schedule Free Consultation
               </button>

@@ -71,7 +71,7 @@ const Experience = () => {
                 <h4 className="text-2xl font-black text-foreground">{opt.title}</h4>
                 <p className="text-sm font-bold text-muted">{opt.description}</p>
               </div>
-              <button className="w-full py-4 rounded-xl bg-blue-600 text-white font-black text-sm flex items-center justify-center gap-2 hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20 active:scale-95">
+              <button className="w-full py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-black text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-lg shadow-blue-600/20 active:scale-95">
                 {opt.btnText}
                 <ArrowRight size={16} />
               </button>

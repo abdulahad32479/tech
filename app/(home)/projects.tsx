@@ -186,8 +186,8 @@ const Projects = () => {
                 <Link href={`/projects/${project.slug}`}>
                   <button
                     className="mt-4 w-full py-3 rounded-xl 
-                    bg-sky-500 text-white font-bold
-                    hover:bg-sky-600 transition 
+                    bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold
+                    hover:opacity-90 transition 
                     flex items-center justify-center gap-2"
                   >
                     View Full Details
@@ -205,9 +205,9 @@ const Projects = () => {
             <button
               onClick={handleViewMore}
               className="px-12 py-4 rounded-full 
-              bg-gradient-to-r from-sky-500 to-teal-400
+              bg-gradient-to-r from-blue-600 to-cyan-500
               text-white font-bold text-lg
-              hover:opacity-90 transition shadow-lg"
+              hover:opacity-90 transition shadow-lg shadow-blue-600/40"
             >
               View More Projects
             </button>

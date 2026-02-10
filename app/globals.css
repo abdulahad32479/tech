@@ -2,28 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 🌙 Default Theme (Gradient Card) */
 :root {
-  --background: #0d0e11;
+  --background: #3D45AA;
   --foreground: #ffffff;
-  --card: #121317;
+
+  /* Gradient card */
+  --card: linear-gradient(to right, #2563eb, #06b6d4);
   --card-foreground: #ffffff;
-  --border: rgba(255, 255, 255, 0.1);
-  --muted: rgba(255, 255, 255, 0.4);
+
+  --border: rgba(255, 255, 255, 0.15);
+  --muted: rgba(255, 255, 255, 0.5);
 }
 
+/* ☀️ Light Mode (Solid Card) */
 body.light-mode {
   --background: #ffffff;
   --foreground: #0d0e11;
+
+  /* Solid card for light mode */
   --card: #f8f9fa;
   --card-foreground: #0d0e11;
+
   --border: rgba(0, 0, 0, 0.1);
   --muted: rgba(0, 0, 0, 0.4);
 }
 
+/* Base styles */
 @layer base {
   body {
     @apply transition-colors duration-300;
-    background-color: var(--background);
+    background: var(--background);
     color: var(--foreground);
+  }
+}
+
+/* Components */
+@layer components {
+  .card {
+    background: var(--card); /* ✅ works for gradient & solid */
+    color: var(--card-foreground);
+    border: 1px solid var(--border);
+    @apply rounded-xl p-4 shadow-md transition-all duration-300;
+  }
+
+  .muted {
+    color: var(--muted);
   }
 }

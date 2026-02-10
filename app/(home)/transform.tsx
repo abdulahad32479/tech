@@ -58,7 +58,7 @@ const Transform = () => {
                 Get answers to your questions immediately, explore our portfolio, and discuss your project needs with our AI assistant.
               </p>
               
-              <button className="w-full mt-auto py-4 rounded-xl bg-blue-600 text-white font-bold flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20">
+              <button className="w-full mt-auto py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-colors shadow-lg shadow-blue-600/20">
                 Chat Now <ArrowRight size={18} />
               </button>
             </div>

@@ -150,7 +150,7 @@ const Strategy = () => {
                     className={`w-full py-4 rounded-xl font-black text-[20px] flex items-center justify-center gap-3 transition-all active:scale-95 shadow-xl shadow-blue-600/20 ${
                       isSubmitted 
                       ? 'bg-green-600 text-white shadow-green-600/20' 
-                      : 'bg-blue-600 text-white hover:bg-blue-700'
+                      : 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white hover:opacity-90'
                     }`}
                   >
                     {isSubmitting ? (
