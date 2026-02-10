@@ -17,6 +17,7 @@ import Transform from "./(home)/transform";
 import Contact from "./(home)/contact";
 import Footer from "@/src/components/footer";
 import ParticlesBackground from "@/src/components/ui/particles-background";
+import AboutSection from "./(home)/about";
 
 const Home: React.FC = () => {
   return (
@@ -38,7 +39,7 @@ const Home: React.FC = () => {
         <Process />
         <Choose />
       </section>
-
+      <AboutSection />
       {/* Services */}
       <section id="services">
         <Solutions />
