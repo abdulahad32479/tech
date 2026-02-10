@@ -31,13 +31,19 @@ const Navbar = () => {
     { name: "Contact", id: "contact", scroll: true },
   ];
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false);
-    }
-  };
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (!element) return;
+
+  // close menu first
+  setIsMenuOpen(false);
+
+  // wait for body scroll to unlock (mobile fix)
+  setTimeout(() => {
+    element.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, 300);
+};
+
 
   // Sync state with body class if needed on mount
   useEffect(() => {
