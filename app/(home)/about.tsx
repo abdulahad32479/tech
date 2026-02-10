@@ -7,12 +7,13 @@ const AboutSection: React.FC = () => {
       <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24">
         {/* Left Image */}
         <div className="flex-shrink-0 w-full md:w-1/2 rounded-3xl overflow-hidden shadow-lg">
-          <img
-            src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80"
-            alt="Modern office meeting room"
-            className="w-full h-auto object-cover rounded-3xl"
-            loading="lazy"
-          />
+       <img
+  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80"
+  alt="Large team sitting around a conference table in an office meeting"
+  className="w-full h-auto object-cover rounded-3xl"
+  loading="lazy"
+/>
+
         </div>
 
         {/* Right Content */}

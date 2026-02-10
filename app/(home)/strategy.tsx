@@ -61,7 +61,7 @@ const Strategy = () => {
             <div className="space-y-6">
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
                 Download Your Free <br />
-                <span className="text-blue-500">Digital Transformation Playbook</span>
+                <span className=" text-[#F5F6FF]">Digital Transformation Playbook</span>
               </h2>
               <p className="text-lg text-muted font-medium max-w-xl leading-relaxed">
                 Get the exact framework we use to help businesses achieve 10x ROI on their software investments. Learn from 350+ successful projects.
