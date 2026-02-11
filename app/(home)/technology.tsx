@@ -84,14 +84,13 @@ const Technology = () => {
                 onClick={() => setActiveTab(tab)}
                 className={`flex-1 py-3 md:py-4 px-1 md:px-2 rounded-[14px] font-black text-[10px] md:text-sm transition-all duration-300 relative whitespace-nowrap ${
                   activeTab === tab 
-                  ? "text-white" 
+                  ? "text-background" 
                   : "text-foreground/40 hover:text-foreground/60"
-                }`}
-              >
+                }`}>
                 {activeTab === tab && (
                   <motion.div 
                     layoutId="activeTab"
-                    className="absolute inset-0 bg-black rounded-[14px] shadow-2xl border border-white/5"
+                    className="absolute inset-0 bg-foreground rounded-[14px] shadow-2xl border border-foreground/5"
                     transition={{ type: "spring", bounce: 0.1, duration: 0.5 }}
                   />
                 )}
