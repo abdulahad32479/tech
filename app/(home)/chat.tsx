@@ -99,11 +99,11 @@ const ConsultationCard = () => {
                   }}
                   className={`flex items-center gap-1 md:gap-2 px-2 md:px-4 py-2 md:py-3 rounded-lg md:rounded-xl border transition-all text-[11px] md:text-[14px] font-bold ${
                     selectedDate === date 
-                      ? 'bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-600/20' 
-                      : 'bg-foreground/[0.03] border-border text-white/70 hover:border-foreground/20'
+                      ? 'bg-blue-600 border-blue-500 text-foreground shadow-lg shadow-blue-600/20' 
+                      : 'bg-foreground/[0.03] border-border text-foreground/70 hover:border-foreground/20'
                   }`}
                 >
-                  <Calendar size={12} className={`${selectedDate === date ? 'text-white' : 'opacity-50'} hidden sm:block`} />
+                  <Calendar size={12} className={`${selectedDate === date ? 'text-foreground' : 'opacity-50'} hidden sm:block`} />
                   <span className="text-center w-full">{date}</span>
                 </button>
               ))}
@@ -134,11 +134,11 @@ const ConsultationCard = () => {
                     onClick={() => setSelectedTime(time)}
                     className={`flex flex-col md:flex-row items-center justify-center gap-1 px-2 md:px-3 py-2 md:py-3 rounded-lg md:rounded-xl border transition-all text-[10px] md:text-[12px] font-bold ${
                       selectedTime === time 
-                        ? 'bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-600/20' 
-                        : 'bg-foreground/[0.03] border-border text-white/70 hover:border-foreground/20'
+                        ? 'bg-blue-600 border-blue-500 text-foreground shadow-lg shadow-blue-600/20' 
+                        : 'bg-foreground/[0.03] border-border text-foreground/70 hover:border-foreground/20'
                     }`}
                   >
-                    <Clock size={12} className={`${selectedTime === time ? 'text-white' : 'opacity-50'} hidden md:block`} />
+                    <Clock size={12} className={`${selectedTime === time ? 'text-foreground' : 'opacity-50'} hidden md:block`} />
                     <span>{time}</span>
                   </button>
                 ))}
@@ -146,9 +146,9 @@ const ConsultationCard = () => {
             </div>
 
             <div>
-              <p className="text-sm md:text-[16px] font-bold text-white/70 mb-3 md:mb-4">Your timezone:</p>
+              <p className="text-sm md:text-[16px] font-bold text-foreground/70 mb-3 md:mb-4">Your timezone:</p>
               <div className="relative group">
-                <Globe className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70" size={18} />
+                <Globe className="absolute left-4 top-1/2 -translate-y-1/2 text-foreground/70" size={18} />
                 <select 
                   value={timezone}
                   onChange={(e) => setTimezone(e.target.value)}
@@ -164,7 +164,7 @@ const ConsultationCard = () => {
 
             <button 
               onClick={() => setIsSubmitted(true)}
-              className="w-full py-3 md:py-4 rounded-lg md:rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-black text-base md:text-lg shadow-xl shadow-blue-600/30 hover:opacity-90 transition-all active:scale-95"
+              className="w-full py-3 md:py-4 rounded-lg md:rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-foreground font-black text-base md:text-lg shadow-xl shadow-blue-600/30 hover:opacity-90 transition-all active:scale-95"
             >
               Continue
             </button>
@@ -181,7 +181,7 @@ const ConsultationCard = () => {
              {selectedTime ? ` (${timezone})` : ""}
            </span>
         </div>
-        <p className="text-[11px] font-bold text-white/70 text-center">30-minute free consultation with our team</p>
+        <p className="text-[11px] font-bold text-foreground/70 text-center">30-minute free consultation with our team</p>
       </div>
     </div>
   );
@@ -598,7 +598,7 @@ const Chat = () => {
                           ? 'bg-card border-border shadow-blue-500/5' 
                           : 'bg-blue-600 text-white border-blue-500/40 shadow-blue-600/20'
                       }`}>
-                        {m.role === 'assistant' ? <Bot className="text-blue-500" size={20} /> : <User className="text-white" size={20} />}
+                        {m.role === 'assistant' ? <Bot className="text-blue-500" size={20} /> : <User className="text-foreground" size={20} />}
                       </div>
 
                       {/* Content */}
@@ -606,7 +606,7 @@ const Chat = () => {
                         <div className={`p-4 md:p-5 rounded-[20px] md:rounded-[24px] font-medium ${
                           m.role === 'assistant' 
                             ? 'bg-card border border-border text-foreground/90' 
-                            : 'bg-blue-600 text-white shadow-lg shadow-blue-600/10'
+                            : 'bg-blue-600 text-foreground shadow-lg shadow-blue-600/10'
                         }`}>
                           {m.content}
                         </div>
@@ -653,7 +653,7 @@ const Chat = () => {
                       value={inputValue}
                       onChange={(e) => setInputValue(e.target.value)}
                       placeholder="Ask me anything..."
-                      className="w-full bg-transparent border-none outline-none py-3 md:py-3.5 px-4 md:px-6 font-bold text-[16px] tracking-wide text-foreground placeholder:text-white/60"
+                      className="w-full bg-transparent border-none outline-none py-3 md:py-3.5 px-4 md:px-6 font-bold text-[16px] tracking-wide text-foreground placeholder:text-foreground/60"
                       onKeyDown={(e) => e.key === 'Enter' && handleSend(inputValue)}
                     />
                   </div>
@@ -661,7 +661,7 @@ const Chat = () => {
                   {/* Separate Send Button */}
                   <button 
                     onClick={() => handleSend(inputValue)}
-                    className="h-[50px] md:h-[60px] px-5 md:px-8 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white hover:opacity-90 transition-all active:scale-95 shadow-xl shadow-blue-600/30 flex items-center gap-2 md:gap-3 font-black text-sm md:text-lg group shrink-0"
+                    className="h-[50px] md:h-[60px] px-5 md:px-8 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-foreground hover:opacity-90 transition-all active:scale-95 shadow-xl shadow-blue-600/30 flex items-center gap-2 md:gap-3 font-black text-sm md:text-lg group shrink-0"
                   >
                     <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform md:w-[22px] md:h-[22px]" />
                     <span className="hidden sm:inline">Send</span>
@@ -684,11 +684,11 @@ const Chat = () => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           onClick={() => setIsChatOpen(true)}
-          className="fixed bottom-10 right-10 w-20 h-20 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-[0_0_50px_rgba(37,99,235,0.4)] hover:scale-110 active:scale-95 transition-all z-50 group border border-white/10"
+          className="fixed bottom-10 right-10 w-20 h-20 rounded-full bg-blue-600 text-foreground flex items-center justify-center shadow-[0_0_50px_rgba(37,99,235,0.4)] hover:scale-110 active:scale-95 transition-all z-50 group border border-white/10"
         >
           <MessageSquare size={32} />
           <div className="absolute top-0 right-0 w-8 h-8 rounded-full bg-green-500 border-[6px] border-background flex items-center justify-center shadow-lg">
-             <span className="text-[10px] font-black text-white">AI</span>
+             <span className="text-[10px] font-black text-foreground">AI</span>
           </div>
         </motion.button>
       )}

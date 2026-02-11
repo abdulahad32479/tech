@@ -131,7 +131,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-white/80 font-medium"
+            className="text-lg text-foreground/80 font-medium"
           >
             Explore our portfolio of innovative digital solutions
           </motion.p>
@@ -165,7 +165,7 @@ const Projects = () => {
                   {project.title}
                 </h3>
 
-                <p className="text-sm font-semibold text-white/70">
+                <p className="text-sm font-semibold text-foreground/70">
                   {project.description}
                 </p>
 
@@ -186,7 +186,7 @@ const Projects = () => {
                 <Link href={`/projects/${project.slug}`}>
                   <button
                     className="mt-4 w-full py-3 rounded-xl 
-                    bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold
+                    bg-gradient-to-r from-blue-600 to-cyan-500 text-foreground font-bold
                     hover:opacity-90 transition 
                     flex items-center justify-center gap-2"
                   >
@@ -206,7 +206,7 @@ const Projects = () => {
               onClick={handleViewMore}
               className="px-12 py-4 rounded-full 
               bg-gradient-to-r from-blue-600 to-cyan-500
-              text-white font-bold text-lg
+              text-foreground font-bold text-lg
               hover:opacity-90 transition shadow-lg shadow-blue-600/40"
             >
               View More Projects

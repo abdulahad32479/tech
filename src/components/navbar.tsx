@@ -120,7 +120,7 @@ const scrollToSection = (id: string) => {
             <button className="px-5 py-2.5 rounded-[5px] border border-border font-bold text-[13px] hover:bg-foreground hover:text-background transition-all">
               Book Consultation
             </button>
-            <button className="px-5 py-2.5 border border-blue-500 rounded-[5px] bg-gradient-to-r from-blue-600 to-cyan-500 font-bold text-[13px] text-white hover:opacity-90 transition-all shadow-lg shadow-blue-600/40">
+            <button className="px-5 py-2.5 border border-blue-500 rounded-[5px] bg-gradient-to-r from-blue-600 to-cyan-500 font-bold text-[13px] text-foreground hover:opacity-90 transition-all shadow-lg shadow-blue-600/40">
               Get Started
             </button>
           </div>
@@ -160,7 +160,7 @@ const scrollToSection = (id: string) => {
                 <button className="w-full py-3 md:py-4 rounded-lg md:rounded-xl border border-foreground/10 font-bold text-sm uppercase tracking-widest bg-foreground/5 hover:bg-foreground/10 transition-all">
                   Book Consultation
                 </button>
-                <button className="w-full py-3 md:py-4 rounded-lg md:rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-sm uppercase tracking-widest shadow-lg shadow-blue-600/40 hover:opacity-90 transition-all">
+                <button className="w-full py-3 md:py-4 rounded-lg md:rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-foreground font-bold text-sm uppercase tracking-widest shadow-lg shadow-blue-600/40 hover:opacity-90 transition-all">
                   Get Started
                 </button>
               </div>

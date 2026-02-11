@@ -61,9 +61,9 @@ const Strategy = () => {
             <div className="space-y-6">
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
                 Download Your Free <br />
-                <span className=" text-[#F5F6FF]">Digital Transformation Playbook</span>
+                <span className="text-foreground/90">Digital Transformation Playbook</span>
               </h2>
-              <p className="text-lg text-white/80 font-medium max-w-xl leading-relaxed">
+              <p className="text-lg text-foreground/80 font-medium max-w-xl leading-relaxed">
                 Get the exact framework we use to help businesses achieve 10x ROI on their software investments. Learn from 350+ successful projects.
               </p>
             </div>
@@ -107,12 +107,12 @@ const Strategy = () => {
 
                 <div className="space-y-2">
                   <h3 className="text-3xl font-black text-foreground">Get Instant Access</h3>
-                  <p className="text-sm text-white/70 font-bold">Enter your details below</p>
+                  <p className="text-sm text-foreground/70 font-bold">Enter your details below</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="w-full space-y-5">
                   <div className="text-left space-y-2">
-                    <label className="text-xs font-black uppercase tracking-widest text-white/70 pl-1">Full Name</label>
+                    <label className="text-xs font-black uppercase tracking-widest text-foreground/70 pl-1">Full Name</label>
                     <input 
                       required
                       type="text" 
@@ -122,7 +122,7 @@ const Strategy = () => {
                   </div>
 
                   <div className="text-left space-y-2">
-                    <label className="text-xs font-black uppercase tracking-widest text-white/70 pl-1">Business Email</label>
+                    <label className="text-xs font-black uppercase tracking-widest text-foreground/70 pl-1">Business Email</label>
                     <input 
                       required
                       type="email" 
@@ -138,9 +138,9 @@ const Strategy = () => {
                         type="checkbox" 
                         className="peer h-5 w-5 cursor-pointer appearance-none rounded-md border border-border bg-background checked:bg-blue-600 checked:border-blue-600 transition-all"
                       />
-                      <CheckCircle2 className="absolute h-3.5 w-3.5 text-white opacity-0 peer-checked:opacity-100 left-0.5 pointer-events-none" />
+                      <CheckCircle2 className="absolute h-3.5 w-3.5 text-foreground opacity-0 peer-checked:opacity-100 left-0.5 pointer-events-none" />
                     </div>
-                    <label className="text-[11px] font-bold text-white/70 leading-tight cursor-pointer">
+                    <label className="text-[11px] font-bold text-foreground/70 leading-tight cursor-pointer">
                       I agree to receive emails with the strategy guide and occasional updates about software development insights. Unsubscribe anytime.
                     </label>
                   </div>
@@ -149,8 +149,8 @@ const Strategy = () => {
                     disabled={isSubmitting || isSubmitted}
                     className={`w-full py-4 rounded-xl font-black text-[20px] flex items-center justify-center gap-3 transition-all active:scale-95 shadow-xl shadow-blue-600/20 ${
                       isSubmitted 
-                      ? 'bg-green-600 text-white shadow-green-600/20' 
-                      : 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white hover:opacity-90'
+                      ? 'bg-green-600 text-foreground shadow-green-600/20' 
+                      : 'bg-gradient-to-r from-blue-600 to-cyan-500 text-foreground hover:opacity-90'
                     }`}
                   >
                     {isSubmitting ? (
@@ -169,7 +169,7 @@ const Strategy = () => {
                   </button>
                 </form>
 
-                <div className="flex items-center  text-[10px]  text-white/70">
+                <div className="flex items-center  text-[10px]  text-foreground/70">
                   <span>100% free</span>
                   <div className="w-1 h-1 rounded-full bg-muted/40" />
                   <span>No credit card required</span>

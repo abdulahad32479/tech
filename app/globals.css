@@ -50,3 +50,17 @@ body.light-mode {
     color: var(--muted);
   }
 }
+
+/* Override utilities that explicitly use white so "light-mode" shows black text
+   This changes any Tailwind `text-white` / `text-white/XX` and placeholder:text-white
+   to use the current `--foreground` color (black in light-mode). */
+
+[class*="text-white"] {
+  color: var(--foreground) !important;
+}
+
+[class*="placeholder:text-white"]::placeholder {
+  color: var(--foreground) !important;
+  opacity: 0.6;
+}
+

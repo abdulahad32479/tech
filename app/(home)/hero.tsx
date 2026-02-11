@@ -32,9 +32,9 @@ const Hero = () => {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-foreground/5 border border-foreground/10 backdrop-blur-md mb-8"
         >
-          <Sparkles size={14} className="text-blue-500" />
-          <span className="text-sm font-medium opacity-70">
-            Trusted by <span className="text-blue-500 font-semibold">85+ repeat clients</span>
+          <Sparkles size={14} className="text-blue-600" />
+          <span className="text-sm font-medium text-foreground/70">
+            Trusted by <span className="text-blue-600 font-semibold">85+ repeat clients</span>
           </span>
         </motion.div>
 

@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-background text-foreground transition-colors duration-300`}>
+      <body className={`${inter.className} light-mode bg-background text-foreground transition-colors duration-300`}>
         <Toaster />
         <MouseGlow />
         {children}

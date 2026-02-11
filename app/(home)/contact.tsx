@@ -14,10 +14,10 @@ const Contact = () => {
           className="grid grid-cols-1 lg:grid-cols-2 rounded-3xl overflow-hidden shadow-2xl border border-border"
         >
           {/* LEFT BLUE PANEL */}
-          <div className="bg-gradient-to-br from-blue-600 to-cyan-500 text-white p-10 lg:p-14 flex flex-col justify-between">
+          <div className="bg-gradient-to-br from-blue-600 to-cyan-500 text-foreground p-10 lg:p-14 flex flex-col justify-between">
             <div>
               <h2 className="text-4xl font-bold mb-4">Let’s talk.</h2>
-              <p className="text-white/80 max-w-sm leading-relaxed">
+              <p className="text-foreground/80 max-w-sm leading-relaxed">
                 Have a project in mind? We’d love to hear about it.
                 Send us a message and we’ll get back to you within 24 hours.
               </p>
@@ -25,17 +25,17 @@ const Contact = () => {
 
             <div className="space-y-6 mt-12">
               <div className="flex items-center gap-4">
-                <Mail className="text-white" />
+                <Mail className="text-foreground" />
                 <span>info@fabtechsol.com</span>
               </div>
 
               <div className="flex items-center gap-4">
-                <Phone className="text-white" />
+                <Phone className="text-foreground" />
                 <span>+92 347 587 9566</span>
               </div>
 
               <div className="flex items-center gap-4">
-                <MapPin className="text-white" />
+                <MapPin className="text-foreground" />
                 <span>Sialkot, Pakistan</span>
               </div>
             </div>
@@ -92,7 +92,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-4 font-semibold text-lg hover:opacity-90 transition"
+                className="w-full rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-foreground py-4 font-semibold text-lg hover:opacity-90 transition"
               >
                 Send Message
               </button>

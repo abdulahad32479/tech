@@ -53,7 +53,7 @@ const Process = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-white/80 font-medium"
+            className="text-lg text-foreground/80 font-medium"
           >
             A simple, transparent approach to bringing your project to life
           </motion.p>
@@ -76,7 +76,7 @@ const Process = () => {
                   {step.icon}
                 </div>
                 {/* Step Number Badge */}
-                <div className={`absolute -top-1 -right-1 w-8 h-8 ${step.badgeColor} rounded-full border-4 border-[#0d0e11] flex items-center justify-center text-[10px] font-black text-white`}>
+                <div className={`absolute -top-1 -right-1 w-8 h-8 ${step.badgeColor} rounded-full border-4 border-[#0d0e11] flex items-center justify-center text-[10px] font-black text-foreground`}>
                   {step.number}
                 </div>
               </div>
@@ -85,7 +85,7 @@ const Process = () => {
                 <h4 className="text-2xl font-black text-foreground">
                   {step.title}
                 </h4>
-                <p className="text-[15px] font-bold text-white/80 leading-relaxed">
+                <p className="text-[15px] font-bold text-foreground/80 leading-relaxed">
                   {step.description}
                 </p>
               </div>

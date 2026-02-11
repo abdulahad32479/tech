@@ -65,7 +65,7 @@ const Trusted = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-white/80 font-medium"
+            className="text-lg text-foreground/80 font-medium"
           >
             Don't just take our word for it - hear directly from clients who've transformed their businesses with our solutions
           </motion.p>
@@ -92,7 +92,7 @@ const Trusted = () => {
               {/* Content with Inline Quote */}
               <div className="relative">
                 <Quote size={20} fill="currentColor" className="text-blue-500/20 absolute -left-6 -top-2 rotate-180" />
-                <p className="text-[14px] font-bold text-white/80 italic leading-relaxed pl-2">
+                <p className="text-[14px] font-bold text-foreground/80 italic leading-relaxed pl-2">
                   {t.content}
                 </p>
               </div>
@@ -104,7 +104,7 @@ const Trusted = () => {
                 </div>
                 <div>
                   <div className="text-[14px] font-black text-foreground">{t.name}</div>
-                  <div className="text-[11px] font-bold text-white/70 leading-tight">{t.role}</div>
+                  <div className="text-[11px] font-bold text-foreground/70 leading-tight">{t.role}</div>
                 </div>
               </div>
             </motion.div>
@@ -125,7 +125,7 @@ const Trusted = () => {
               <div className="text-4xl font-black text-blue-500 group-hover:scale-110 transition-transform">
                 {stat.value}
               </div>
-              <div className="text-sm font-black text-white/70 uppercase tracking-widest">
+              <div className="text-sm font-black text-foreground/70 uppercase tracking-widest">
                 {stat.label}
               </div>
             </motion.div>

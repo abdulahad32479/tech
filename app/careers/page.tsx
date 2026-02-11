@@ -157,21 +157,21 @@ export default function CareersPage() {
             </h1>
 
             {/* Description */}
-            <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-3xl mx-auto">
               Join a team of 75+ passionate engineers and designers building cutting-edge solutions for businesses worldwide. Since 2017, we've delivered 350+ successful projects.
             </p>
 
             {/* Stats */}
             <div className="flex flex-wrap justify-center gap-8 pt-4">
-              <div className="flex items-center gap-2 text-white/70">
+              <div className="flex items-center gap-2 text-foreground/70">
                 <MapPin size={20} className="text-blue-500" />
                 <span className="font-semibold">Remote & Onsite</span>
               </div>
-              <div className="flex items-center gap-2 text-white/70">
+              <div className="flex items-center gap-2 text-foreground/70">
                 <Users size={20} className="text-blue-500" />
                 <span className="font-semibold">75+ Team Members</span>
               </div>
-              <div className="flex items-center gap-2 text-white/70">
+              <div className="flex items-center gap-2 text-foreground/70">
                 <Globe size={20} className="text-blue-500" />
                 <span className="font-semibold">Global Clients</span>
               </div>
@@ -190,7 +190,7 @@ export default function CareersPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Open Positions</h2>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto">
+            <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
               We're looking for mid-level and senior professionals across these departments
             </p>
           </motion.div>
@@ -213,7 +213,7 @@ export default function CareersPage() {
                 </div>
                 <ul className="space-y-3">
                   {dept.positions.map((position, pIdx) => (
-                    <li key={pIdx} className="flex items-start gap-2 text-white/70">
+                    <li key={pIdx} className="flex items-start gap-2 text-foreground/70">
                       <span className="text-blue-500 mt-1">›</span>
                       <span className="text-sm">{position}</span>
                     </li>
@@ -235,7 +235,7 @@ export default function CareersPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Join FabTechSol?</h2>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto">
+            <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
               We invest in our people and create an environment where you can do your best work
             </p>
           </motion.div>
@@ -271,7 +271,7 @@ export default function CareersPage() {
           >
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">Apply Now</h2>
-              <p className="text-white/80">
+              <p className="text-foreground/80">
                 Fill out the form below to apply. We'll review your application within 3-5 business days.
               </p>
             </div>
@@ -290,7 +290,7 @@ export default function CareersPage() {
                     onChange={handleInputChange}
                     placeholder="John Doe"
                     required
-                    className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-blue-500 outline-none transition-colors text-foreground placeholder:text-white/60"
+                    className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-blue-500 outline-none transition-colors text-foreground placeholder:text-foreground/60"
                   />
                 </div>
                 <div>
@@ -304,7 +304,7 @@ export default function CareersPage() {
                     onChange={handleInputChange}
                     placeholder="john@example.com"
                     required
-                    className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-blue-500 outline-none transition-colors text-foreground placeholder:text-white/60"
+                    className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-blue-500 outline-none transition-colors text-foreground placeholder:text-foreground/60"
                   />
                 </div>
               </div>
@@ -319,7 +319,7 @@ export default function CareersPage() {
                     value={formData.phone}
                     onChange={handleInputChange}
                     placeholder="+1 234 567 8900"
-                    className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-blue-500 outline-none transition-colors text-foreground placeholder:text-white/60"
+                    className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-blue-500 outline-none transition-colors text-foreground placeholder:text-foreground/60"
                   />
                 </div>
                 <div>
@@ -330,7 +330,7 @@ export default function CareersPage() {
                     value={formData.whatsapp}
                     onChange={handleInputChange}
                     placeholder="+1 234 567 8900"
-                    className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-blue-500 outline-none transition-colors text-foreground placeholder:text-white/60"
+                    className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-blue-500 outline-none transition-colors text-foreground placeholder:text-foreground/60"
                   />
                 </div>
               </div>
@@ -376,7 +376,7 @@ export default function CareersPage() {
               {/* Key Skills */}
               <div>
                 <label className="block text-sm font-bold mb-2">
-                    Key Skills <span className="text-red-500">*</span> <span className="text-white/60 font-normal">(comma-separated)</span>
+                    Key Skills <span className="text-red-500">*</span> <span className="text-foreground/60 font-normal">(comma-separated)</span>
                 </label>
                 <input
                   type="text"
@@ -385,7 +385,7 @@ export default function CareersPage() {
                   onChange={handleInputChange}
                   placeholder="React, TypeScript, Node.js, AWS"
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-blue-500 outline-none transition-colors text-foreground placeholder:text-white/60"
+                  className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-blue-500 outline-none transition-colors text-foreground placeholder:text-foreground/60"
                 />
               </div>
 
@@ -418,7 +418,7 @@ export default function CareersPage() {
               {/* Upload CV */}
               <div>
                 <label className="block text-sm font-bold mb-2">
-                    Upload CV <span className="text-white/60 font-normal">(PDF or Word, max 10MB)</span>
+                    Upload CV <span className="text-foreground/60 font-normal">(PDF or Word, max 10MB)</span>
                 </label>
                 <div className="relative">
                   <input
@@ -448,14 +448,14 @@ export default function CareersPage() {
                   onChange={handleInputChange}
                   placeholder="Tell us why you'd be a great fit for this role..."
                   rows={6}
-                  className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-blue-500 outline-none transition-colors text-foreground placeholder:text-white/60 resize-none"
+                  className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-blue-500 outline-none transition-colors text-foreground placeholder:text-foreground/60 resize-none"
                 />
               </div>
 
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-lg hover:opacity-90 transition-all shadow-lg shadow-blue-600/40 active:scale-[0.98]"
+                className="w-full py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-foreground font-bold text-lg hover:opacity-90 transition-all shadow-lg shadow-blue-600/40 active:scale-[0.98]"
               >
                 Submit Application
               </button>
