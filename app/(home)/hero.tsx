@@ -22,8 +22,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden bg-background transition-colors duration-300">
       {/* Background Glows */}
-    
-      
+
       <div className="container relative z-10 flex flex-col items-center text-center">
         {/* Trusted Badge */}
         <motion.div
@@ -34,7 +33,10 @@ const Hero = () => {
         >
           <Sparkles size={14} className="text-blue-600" />
           <span className="text-sm font-medium text-foreground/70">
-            Trusted by <span className="text-blue-600 font-semibold">85+ repeat clients</span>
+            Trusted by{" "}
+            <span className="text-blue-600 font-semibold">
+              85+ repeat clients
+            </span>
           </span>
         </motion.div>
 
@@ -69,9 +71,9 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="max-w-2xl text-lg md:text-xl opacity-60 mb-12 leading-relaxed font-medium"
         >
-          From AI integration to full-stack development, we deliver 
-          enterprise-grade solutions that drive real results. Join 350+ 
-          successful projects.
+          Performance, Powered by Innovation From AI-powered automation to
+          high-performing digital products, we create technology that helps
+          businesses grow and scale.
         </motion.p>
 
         {/* CTAs */}
@@ -83,9 +85,12 @@ const Hero = () => {
         >
           <button className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-xl shadow-blue-600/20 group">
             Start Your Project
-            <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+            <ArrowRight
+              size={18}
+              className="transition-transform group-hover:translate-x-1"
+            />
           </button>
-          
+
           <button className="w-full sm:w-auto px-8 py-4 rounded-xl border border-foreground/10 bg-foreground/5 backdrop-blur-md font-bold flex items-center justify-center gap-2 hover:bg-foreground hover:text-background transition-all">
             <Calendar size={18} />
             Book Free Consultation

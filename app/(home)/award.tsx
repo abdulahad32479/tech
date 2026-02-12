@@ -6,7 +6,7 @@ import { Trophy, Star, Users, Award as AwardIcon, Clock, TrendingUp } from 'luci
 const awards = [
   {
     icon: <Trophy className="text-blue-500" size={24} />,
-    value: "350+",
+    value: " 150+",
     label: "Projects Completed",
     description: "Successfully delivered across multiple industries"
   },
@@ -18,13 +18,13 @@ const awards = [
   },
   {
     icon: <Users className="text-blue-500" size={24} />,
-    value: "25+",
+    value: "45+",
     label: "Repeat Clients",
     description: "Long-term partnerships built on trust"
   },
   {
     icon: <AwardIcon className="text-blue-500" size={24} />,
-    value: "6+",
+    value: "3+",
     label: "Years Excellence",
     description: "Proven track record since 2017"
   },
@@ -36,7 +36,7 @@ const awards = [
   },
   {
     icon: <TrendingUp className="text-blue-500" size={24} />,
-    value: "75+",
+    value: "25",
     label: "Expert Team",
     description: "Skilled developers ready to help"
   }

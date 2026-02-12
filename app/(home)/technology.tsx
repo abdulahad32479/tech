@@ -71,7 +71,7 @@ const Technology = () => {
             transition={{ delay: 0.1 }}
             className="text-lg text-foreground/60 font-medium"
           >
-            We use cutting-edge technologies to build scalable, high-performance solutions
+            We leverage advanced technologies to create scalable, high-performance solutions.
           </motion.p>
         </div>
 

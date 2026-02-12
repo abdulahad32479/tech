@@ -44,7 +44,6 @@ const Home: React.FC = () => {
       <section id="services">
         <Solutions />
         <Technology />
-        <Strategy />
       </section>
 
       {/* Portfolio */}

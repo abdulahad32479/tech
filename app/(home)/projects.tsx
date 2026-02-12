@@ -133,7 +133,7 @@ const Projects = () => {
             transition={{ delay: 0.1 }}
             className="text-lg text-foreground/80 font-medium"
           >
-            Explore our portfolio of innovative digital solutions
+            Explore our collection of forward-thinking digital solutions across AI, web, mobile, and enterprise software
           </motion.p>
         </div>
 
