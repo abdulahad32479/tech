@@ -1,22 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (
-    config,
-    { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
-  ) => {
-    config.externals.push({ canvas: 'commonjs canvas' })
-    return config
+  webpack: (config) => {
+    // Required for pdf.js (pdfjs-dist) which uses canvas
+    config.externals.push({ canvas: "commonjs canvas" });
+    return config;
   },
-  //   images: {
-  //     remotePatterns: [
-  //       {
-  //         protocol: "https",
-  //         hostname: "example.com",
-  //         port: "",
-  //         pathname: "/account123/**",
-  //       },
-  //     ],
-  //   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "**.unsplash.com",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

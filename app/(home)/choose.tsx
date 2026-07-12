@@ -70,7 +70,7 @@ const Choose = () => {
           >
             <span className="text-foreground/60">Why Leading Companies</span>
             <br />
-            <span className="text-blue-600">Choose FabTechSol</span>
+            <span className="text-blue-600">Choose Denvora Tech</span>
           </motion.h2>
           
           <motion.p 

@@ -8,19 +8,19 @@ const testimonials = [
     name: "Sarah Mitchell",
     role: "CEO at TechVentures Inc",
     initials: "SM",
-    content: "FabTechSol transformed our e-commerce platform beyond expectations. The AI-powered recommendations they built increased our conversion rate by 180% in just 6 months. Their team is professional, responsive, and truly understands modern technology.",
+    content: "Denvora Tech transformed our e-commerce platform beyond expectations. The custom recommendations they built increased our conversion rate by 180% in just 6 months. Their team is professional, responsive, and truly understands modern technology.",
   },
   {
     name: "Dr. James Rodriguez",
     role: "Chief Technology Officer at HealthCare Solutions",
     initials: "DJR",
-    content: "Working with FabTechSol was a game-changer for our healthcare facilities. They delivered a HIPAA-compliant system that streamlined our operations and saved us countless hours. The quality of their work is outstanding.",
+    content: "Working with Denvora Tech was a game-changer for our healthcare facilities. They delivered a HIPAA-compliant system that streamlined our operations and saved us countless hours. The quality of their work is outstanding.",
   },
   {
     name: "Michael Chen",
     role: "Founder at PropertyPro Realty",
     initials: "MC",
-    content: "The mobile app FabTechSol built for us has been revolutionary. The AR visualization feature is a huge hit with our clients, and we've seen a 40% increase in property viewings. Worth every penny!",
+    content: "The mobile app Denvora Tech built for us has been revolutionary. The AR visualization feature is a huge hit with our clients, and we've seen a 40% increase in property viewings. Worth every penny!",
   }
 ];
 

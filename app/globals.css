@@ -2,45 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 🌙 Default Theme (Solid Dark) */
+/* ============================================
+   THEME TOKENS
+   ============================================ */
+
+/* 🌙 Default Theme (Dark) */
 :root {
   --background: #0F1117;
   --foreground: #ffffff;
-
-  /* Solid dark card */
   --card: #1A1F3A;
   --card-foreground: #ffffff;
-
   --border: rgba(255, 255, 255, 0.15);
-  --muted: #ffffff;
+  --muted: rgba(255, 255, 255, 0.4);
 }
 
-/* ☀️ Light Mode (Solid Card) */
+/* ☀️ Light Mode */
+html.light-mode,
 body.light-mode {
   --background: #ffffff;
   --foreground: #0d0e11;
-
-  /* Solid card for light mode */
   --card: #f8f9fa;
   --card-foreground: #0d0e11;
-
   --border: rgba(0, 0, 0, 0.1);
   --muted: rgba(0, 0, 0, 0.4);
 }
 
-/* Base styles */
+/* ============================================
+   BASE STYLES
+   ============================================ */
 @layer base {
   body {
     @apply transition-colors duration-300;
     background: var(--background);
     color: var(--foreground);
   }
+
+  /* Smooth scroll for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
-/* Components */
+/* ============================================
+   COMPONENT STYLES
+   ============================================ */
 @layer components {
   .card {
-    background: var(--card); /* ✅ works for gradient & solid */
+    background: var(--card);
     color: var(--card-foreground);
     border: 1px solid var(--border);
     @apply rounded-xl p-4 shadow-md transition-all duration-300;
@@ -51,16 +59,30 @@ body.light-mode {
   }
 }
 
-/* Override utilities that explicitly use white so "light-mode" shows black text
-   This changes any Tailwind `text-white` / `text-white/XX` and placeholder:text-white
-   to use the current `--foreground` color (black in light-mode). */
+/* ============================================
+   UTILITY STYLES
+   ============================================ */
+@layer utilities {
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
 
-[class*="text-white"] {
-  color: var(--foreground) !important;
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(37, 99, 235, 0.2);
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(37, 99, 235, 0.4);
+  }
+
+  /* Focus visible ring — ensures keyboard navigation is visible */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2;
+  }
 }
-
-[class*="placeholder:text-white"]::placeholder {
-  color: var(--foreground) !important;
-  opacity: 0.6;
-}
-

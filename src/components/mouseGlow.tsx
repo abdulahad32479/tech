@@ -1,17 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const GLOW_SIZE = 238; // width & height
 
 const MouseGlow = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [visible, setVisible] = useState(false);
+  const rafRef = useRef<number | null>(null);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-      setVisible(true);
+      if (rafRef.current) return;
+      rafRef.current = requestAnimationFrame(() => {
+        setPosition({ x: e.clientX, y: e.clientY });
+        setVisible(true);
+        rafRef.current = null;
+      });
     };
 
     const handleMouseLeave = () => {
@@ -24,6 +29,9 @@ const MouseGlow = () => {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseleave", handleMouseLeave);
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+      }
     };
   }, []);
 
@@ -38,6 +46,7 @@ const MouseGlow = () => {
         }px, 0)`,
         willChange: "transform",
       }}
+      aria-hidden="true"
     >
       <div
         className="rounded-full blur-[100px] bg-blue-600/15"

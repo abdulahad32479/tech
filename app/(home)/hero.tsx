@@ -3,14 +3,14 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, ArrowRight, Sparkles } from "lucide-react";
 
+const titles = [
+  "UI/UX Design",
+  "Mobile Apps",
+  "Web Applications",
+];
+
 const Hero = () => {
   const [index, setIndex] = useState(0);
-  const titles = [
-    "UI/UX Design",
-    "Mobile Apps",
-    "AI Solutions",
-    "Web Applications",
-  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -71,8 +71,8 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="max-w-2xl text-lg md:text-xl opacity-60 mb-12 leading-relaxed font-medium"
         >
-          Performance, Powered by Innovation From AI-powered automation to
-          high-performing digital products, we create technology that helps
+          Performance, Powered by Innovation. From high-performing digital
+          products to scalable web platforms, we create technology that helps
           businesses grow and scale.
         </motion.p>
 

@@ -1,38 +1,41 @@
-"use client";
 import React from "react";
+import dynamic from "next/dynamic";
 import Navbar from "@/src/components/navbar";
-import Hero from "./(home)/hero";
-import Solutions from "./(home)/solutions";
-import Technology from "./(home)/technology";
-import Strategy from "./(home)/strategy";
-import Chat from "./(home)/chat";
-import Projects from "./(home)/projects";
-import Process from "./(home)/process";
-import Trusted from "./(home)/trusted";
-import Award from "./(home)/award";
-import Experience from "./(home)/experience";
-import Choose from "./(home)/choose";
-import Faqs from "./(home)/faqs";
-import Transform from "./(home)/transform";
-import Contact from "./(home)/contact";
 import Footer from "@/src/components/footer";
-import ParticlesBackground from "@/src/components/ui/particles-background";
-import AboutSection from "./(home)/about";
+import ClientParticles from "@/src/components/ui/ClientParticles";
+import ClientChat from "@/src/components/ui/ClientChat";
 
-const Home: React.FC = () => {
+const Hero = dynamic(() => import("./(home)/hero"));
+const Experience = dynamic(() => import("./(home)/experience"));
+const Process = dynamic(() => import("./(home)/process"));
+const Choose = dynamic(() => import("./(home)/choose"));
+const AboutSection = dynamic(() => import("./(home)/about"));
+const Solutions = dynamic(() => import("./(home)/solutions"));
+const Technology = dynamic(() => import("./(home)/technology"));
+const Projects = dynamic(() => import("./(home)/projects"));
+const Trusted = dynamic(() => import("./(home)/trusted"));
+const Award = dynamic(() => import("./(home)/award"));
+const Strategy = dynamic(() => import("./(home)/strategy"));
+const Faqs = dynamic(() => import("./(home)/faqs"));
+const Transform = dynamic(() => import("./(home)/transform"));
+const Contact = dynamic(() => import("./(home)/contact"));
+
+const Home = () => {
   return (
     <main className="relative min-h-screen text-foreground overflow-x-hidden">
-      <ParticlesBackground />
+      <ClientParticles />
       <Navbar />
 
-      {/* Hero / Top */}
+      {/* Hero */}
       <section id="home">
         <Hero />
       </section>
 
-      <section>
-        <Chat />
+      {/* AI Chat Assistant */}
+      <section id="chat">
+        <ClientChat />
       </section>
+
       {/* About */}
       <section id="about">
         <Experience />
@@ -40,6 +43,7 @@ const Home: React.FC = () => {
         <Choose />
       </section>
       <AboutSection />
+
       {/* Services */}
       <section id="services">
         <Solutions />
@@ -53,17 +57,22 @@ const Home: React.FC = () => {
         <Award />
       </section>
 
+      {/* Strategy Guide */}
+      <section id="strategy">
+        <Strategy />
+      </section>
+
       {/* FAQs */}
-      <section>
+      <section id="faqs">
         <Faqs />
       </section>
 
       {/* CTA */}
-      <section>
+      <section id="transform">
         <Transform />
       </section>
 
-      {/* Contact (LAST section) */}
+      {/* Contact */}
       <section id="contact">
         <Contact />
       </section>

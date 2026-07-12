@@ -23,7 +23,7 @@ const options = [
     description: "Complex problem solving with our pros",
     icon: <UserCheck className="text-blue-500" size={24} />,
     btnText: "Book Now",
-    footer: "Pakistan based"
+    footer: "Thunder Bay, Ontario"
   }
 ];
 
@@ -49,7 +49,7 @@ const Experience = () => {
             transition={{ delay: 0.1 }}
             className="text-lg text-foreground/80 font-medium"
           >
-            Choose your preferred way to interact with FabTechSol expertise
+            Choose your preferred way to interact with Denvora Tech expertise
           </motion.p>
         </div>
 

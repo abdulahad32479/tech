@@ -17,7 +17,7 @@ const Footer = () => {
             <Link href="/">
               <Image 
                 src={logo} 
-                alt="FabTechSol Logo" 
+                alt="Denvora Tech Logo" 
                 className="w-28 h-auto cursor-pointer" 
                 priority
               />
@@ -44,7 +44,6 @@ const Footer = () => {
               <li><Link href="#" className="text-foreground/80 hover:text-blue-500 transition-colors">Software Development</Link></li>
               <li><Link href="#" className="text-foreground/80 hover:text-blue-500 transition-colors">Web Applications</Link></li>
               <li><Link href="#" className="text-foreground/80 hover:text-blue-500 transition-colors">Mobile Apps</Link></li>
-              <li><Link href="#" className="text-foreground/80 hover:text-blue-500 transition-colors">AI Integration</Link></li>
               <li><Link href="#" className="text-foreground/80 hover:text-blue-500 transition-colors">UI/UX Design</Link></li>
             </ul>
           </div>
@@ -95,7 +94,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-foreground/60">
-          <p>© 2026 FabTechSol. All rights reserved.</p>
+          <p>© 2026 Denvora Tech. All rights reserved.</p>
           <div className="flex gap-8">
             <Link href="#" className="hover:text-blue-500 transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-blue-500 transition-colors">Terms of Service</Link>

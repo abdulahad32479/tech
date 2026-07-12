@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Code2, 
   Smartphone, 
-  BrainCircuit, 
   Palette,
   Layers,
   Globe,
@@ -29,14 +28,7 @@ const techData = {
   "Mobile": [
     { name: "React Native", icon: <Smartphone className="text-blue-400" />, color: "text-blue-400" },
     { name: "Flutter", icon: <Smartphone className="text-cyan-500" />, color: "text-cyan-500" },
-    { name: "Swift", icon: <Smartphone className="text-orange-500" />, color: "text-orange-500" },
     { name: "Kotlin", icon: <Smartphone className="text-purple-500" />, color: "text-purple-500" }
-  ],
-  "AI/ML": [
-    { name: "OpenAI", icon: <BrainCircuit className="text-purple-400" />, color: "text-purple-400" },
-    { name: "Python", icon: <Code2 className="text-blue-500" />, color: "text-blue-500" },
-    { name: "TensorFlow", icon: <Cpu className="text-orange-600" />, color: "text-orange-600" },
-    { name: "PyTorch", icon: <Cpu className="text-red-500" />, color: "text-red-500" }
   ],
   "UI/UX": [
     { name: "Figma", icon: <Figma className="text-orange-500" />, color: "text-orange-500" },

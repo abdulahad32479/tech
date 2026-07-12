@@ -22,9 +22,10 @@ import {
   Upload,
   Check
 } from "lucide-react";
+import Navbar from "@/src/components/navbar";
 
 const quickQuestions = [
-  "Show me your AI integration projects",
+  "Show me your recent projects",
   "What mobile apps have you developed?",
   "Tell me about your web development services",
   "How can you help with UI/UX design?"
@@ -32,14 +33,14 @@ const quickQuestions = [
 
 const INITIAL_MESSAGE = {
   role: "assistant",
-  content: "Hi! I'm your FabTechSol AI assistant. I'm here to help you learn about our projects, services, and expertise. Ask me anything!"
+  content: "Hi! I'm your Denvora Tech assistant. I'm here to help you learn about our projects, services, and expertise. Ask me anything!"
 };
 
 const ConsultationCard = () => {
   const [step, setStep] = useState(1);
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
-  const [timezone, setTimezone] = useState("Pakistan (PKT)");
+  const [timezone, setTimezone] = useState("Canada (EST)");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const dates = ["Tue, Feb 10", "Wed, Feb 11", "Thu, Feb 12", "Fri, Feb 13", "Mon, Feb 16"];
@@ -154,7 +155,7 @@ const ConsultationCard = () => {
                   onChange={(e) => setTimezone(e.target.value)}
                   className="w-full pl-10 md:pl-12 pr-8 md:pr-10 py-3 md:py-4 rounded-lg md:rounded-xl bg-background border border-foreground/10 outline-none focus:border-blue-500/50 transition-all text-sm md:text-[16px] font-bold text-foreground appearance-none cursor-pointer"
                 >
-                  <option value="Pakistan (PKT)">Pakistan (PKT)</option>
+                  <option value="Canada (EST)">Canada (EST)</option>
                   <option value="London (GMT)">London (GMT)</option>
                   <option value="New York (EST)">New York (EST)</option>
                 </select>
@@ -373,8 +374,6 @@ const ApplyCard = () => {
   );
 };
 
-import Navbar from "@/src/components/navbar";
-
 const Chat = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [inputValue, setInputValue] = useState("");
@@ -388,7 +387,7 @@ const Chat = () => {
   const [typingSpeed, setTypingSpeed] = useState(100);
 
   const questions = [
-    "What's your process for building AI apps?",
+    "What's your process for building mobile apps?",
     "Show me your recent web projects",
     "How can I book a free consultation?"
   ];
@@ -453,7 +452,7 @@ const Chat = () => {
       } else if (type === 'apply') {
         content = "We'd love to have you on our team! Fill out the quick application form below.";
       } else {
-        content = "We've worked on several AI-focused projects to help clients leverage intelligent features. From custom website builders like Staron AI to data analytics dashboards, we ensure impact-driven results.";
+        content = "We've worked on a wide range of projects across web, mobile, and enterprise software. From e-commerce platforms to custom dashboards, we deliver impact-driven results tailored to your business goals.";
       }
       
       setMessages(prev => [...prev, { 
@@ -465,7 +464,7 @@ const Chat = () => {
   };
 
   return (
-    <div id="chat" className="w-full min-h-screen py-24 flex flex-col items-center justify-center bg-background transition-colors duration-300 relative overflow-hidden">
+    <div className="w-full min-h-screen py-24 flex flex-col items-center justify-center bg-background transition-colors duration-300 relative overflow-hidden">
       
       {/* Background Decorative Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
@@ -568,21 +567,6 @@ const Chat = () => {
 
             {/* Chat Body - Scrollable Area */}
             <div className="flex-1 overflow-y-auto scroll-smooth custom-scrollbar pt-4 pb-12 overscroll-contain" style={{ WebkitOverflowScrolling: 'touch' }}>
-              <style jsx global>{`
-                .custom-scrollbar::-webkit-scrollbar {
-                  width: 6px;
-                }
-                .custom-scrollbar::-webkit-scrollbar-track {
-                  background: transparent;
-                }
-                .custom-scrollbar::-webkit-scrollbar-thumb {
-                  background: rgba(37, 99, 235, 0.2);
-                  border-radius: 10px;
-                }
-                .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-                  background: rgba(37, 99, 235, 0.4);
-                }
-              `}</style>
               <div className="container max-w-4xl min-h-full">
                 <div className="space-y-8">
                   {messages.map((m: { role: string; content: string; type?: string }, i) => (

@@ -11,7 +11,7 @@ const ParticlesBackground = () => {
   }, []);
 
   const particlesLoaded = useCallback(async (container: Container | undefined) => {
-    // await console.log(container);
+    // Loaded callback
   }, []);
 
   return (
@@ -27,7 +27,7 @@ const ParticlesBackground = () => {
           width: "100%",
           height: "100%",
           zIndex: 0,
-          pointerEvents: "none"
+          pointerEvents: "none",
         }}
         options={{
           background: {
@@ -35,27 +35,18 @@ const ParticlesBackground = () => {
               value: "transparent",
             },
           },
-          fpsLimit: 120,
+          fpsLimit: 60, // Optimized from 120 FPS
           interactivity: {
             events: {
               onClick: {
-                enable: true,
+                enable: false, // Turn off click to avoid spamming DOM/canvas elements
                 mode: "push",
               },
               onHover: {
-                enable: true,
+                enable: false, // Disabled heavy repulse calculation on hover for performance
                 mode: "repulse",
               },
               resize: true,
-            },
-            modes: {
-              push: {
-                quantity: 2,
-              },
-              repulse: {
-                distance: 150,
-                duration: 0.4,
-              },
             },
           },
           particles: {
@@ -66,7 +57,7 @@ const ParticlesBackground = () => {
               color: "#3b82f6",
               distance: 90,
               enable: true,
-              opacity: 0.45,
+              opacity: 0.25,
               width: 1,
             },
             move: {
@@ -76,24 +67,24 @@ const ParticlesBackground = () => {
                 default: "bounce",
               },
               random: false,
-              speed: 0.6,
+              speed: 0.4,
               straight: false,
             },
             number: {
               density: {
                 enable: true,
-                area: 2000,
+                area: 1600,
               },
-              value: 28,
+              value: 20, // Reduced density for optimized render cost
             },
             opacity: {
-              value: 0.55,
+              value: 0.35,
             },
             shape: {
               type: "circle",
             },
             size: {
-              value: { min: 1.2, max: 3 },
+              value: { min: 1, max: 2 },
             },
           },
           detectRetina: true,
@@ -107,7 +98,7 @@ const ParticlesBackground = () => {
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundColor: "rgba(255, 255, 255, 0.03)",
+          backgroundColor: "rgba(0, 0, 0, 0.02)",
           zIndex: 1,
           pointerEvents: "none"
         }}
